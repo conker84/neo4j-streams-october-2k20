@@ -1,0 +1,373 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n\n# CUD file format\n\nThe CUD file format is a structure ideated by David Allen that simply allow expressing Cypher queries in a JSON format.\n\nIs composed by several fields:\n\n* `op`: the operation type (create, merge, update, delete)\n* `type`: the entity type (node, relationship)\n* `properties`: a Map\u003cK, V\u003e where the key is the property name and the value is the associated value\n* `labels` (mandatory for nodes): list of node labels\n* `ids` (mandatory for node merge operations): a Map\u003cK, V\u003e where the key is the id property name and the value is the associated value\n* `detach` (valid only for delete): a boolean value says if the operation is a detach delete or not\n* `rel_type` (mandatory for relationships): the relationship type\n* `from` (mandatory for relationships): a Map\u003cK, V\u003e with two fields:\n    * `labels`: list of node labels for the source node\n    * `ids` : a Map\u003cK, V\u003e where the key is the id property name and the value is the associated value\n* `to` (mandatory for relationships): a Map\u003cK, V\u003e with two fields:\n    * `labels`: list of node labels for the source node\n    * `ids`: a Map\u003cK, V\u003e where the key is the id property name and the value is the associated value\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:23:16.754",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCUD file format\u003c/h1\u003e\n\u003cp\u003eThe CUD file format is a structure ideated by David Allen that simply allow expressing Cypher queries in a JSON format.\u003c/p\u003e\n\u003cp\u003eIs composed by several fields:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003ccode\u003eop\u003c/code\u003e: the operation type (create, merge, update, delete)\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003etype\u003c/code\u003e: the entity type (node, relationship)\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003eproperties\u003c/code\u003e: a Map\u0026lt;K, V\u0026gt; where the key is the property name and the value is the associated value\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003elabels\u003c/code\u003e (mandatory for nodes): list of node labels\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003eids\u003c/code\u003e (mandatory for node merge operations): a Map\u0026lt;K, V\u0026gt; where the key is the id property name and the value is the associated value\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003edetach\u003c/code\u003e (valid only for delete): a boolean value says if the operation is a detach delete or not\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003erel_type\u003c/code\u003e (mandatory for relationships): the relationship type\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003efrom\u003c/code\u003e (mandatory for relationships): a Map\u0026lt;K, V\u0026gt; with two fields:\n    \u003cul\u003e\n      \u003cli\u003e\u003ccode\u003elabels\u003c/code\u003e: list of node labels for the source node\u003c/li\u003e\n      \u003cli\u003e\u003ccode\u003eids\u003c/code\u003e : a Map\u0026lt;K, V\u0026gt; where the key is the id property name and the value is the associated value\u003c/li\u003e\n    \u003c/ul\u003e\n  \u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003eto\u003c/code\u003e (mandatory for relationships): a Map\u0026lt;K, V\u0026gt; with two fields:\n    \u003cul\u003e\n      \u003cli\u003e\u003ccode\u003elabels\u003c/code\u003e: list of node labels for the source node\u003c/li\u003e\n      \u003cli\u003e\u003ccode\u003eids\u003c/code\u003e: a Map\u0026lt;K, V\u0026gt; where the key is the id property name and the value is the associated value\u003c/li\u003e\n    \u003c/ul\u003e\n  \u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601050727168_-1322358154",
+      "id": "20200925-161847_17583041",
+      "dateCreated": "2020-09-25 16:18:47.169",
+      "dateStarted": "2020-09-25 16:23:16.749",
+      "dateFinished": "2020-09-25 16:23:16.806",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n## Node Example\n\nThe following JSON:\n\n```\n{\n  \"op\": \"merge\",\n  \"properties\": {\n    \"foo\": \"value\",\n    \"key\": 1\n  },\n  \"ids\": {\"key\": 1, \"otherKey\":  \"foo\"},\n  \"labels\": [\"Foo\",\"Bar\"],\n  \"type\": \"node\"\n}\n```\n\n\ngets transformed into the following Cypher query:\n\n```\nMERGE (n:Foo:Bar {key: event.ids.key, otherkey: event.ids.otherkey})\nSET n +\u003d event.properties\n```\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:28:16.075",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eNode Example\u003c/h2\u003e\n\u003cp\u003eThe following JSON:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e{\n  \u0026quot;op\u0026quot;: \u0026quot;merge\u0026quot;,\n  \u0026quot;properties\u0026quot;: {\n    \u0026quot;foo\u0026quot;: \u0026quot;value\u0026quot;,\n    \u0026quot;key\u0026quot;: 1\n  },\n  \u0026quot;ids\u0026quot;: {\u0026quot;key\u0026quot;: 1, \u0026quot;otherKey\u0026quot;:  \u0026quot;foo\u0026quot;},\n  \u0026quot;labels\u0026quot;: [\u0026quot;Foo\u0026quot;,\u0026quot;Bar\u0026quot;],\n  \u0026quot;type\u0026quot;: \u0026quot;node\u0026quot;\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003egets transformed into the following Cypher query:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eMERGE (n:Foo:Bar {key: event.ids.key, otherkey: event.ids.otherkey})\nSET n +\u003d event.properties\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601050955156_-562352416",
+      "id": "20200925-162235_2056972886",
+      "dateCreated": "2020-09-25 16:22:35.156",
+      "dateStarted": "2020-09-25 16:28:16.075",
+      "dateFinished": "2020-09-25 16:28:16.086",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n## Relationship Example\n\nThe following JSON:\n\n```\n{\n  \"op\": \"create\",\n  \"properties\": {\n    \"foo\": \"rel-value\",\n    \"key\": 1\n  },\n  \"rel_type\": \"MY_REL\",\n  \"from\": {\n    \"ids\": {\"key\": 1},\n    \"labels\": [\"Foo\",\"Bar\"]\n  },\n  \"to\": {\n    \"ids\": {\"otherKey\":1},\n    \"labels\": [\"FooBar\"]\n  },\n  \"type\":\"relationship\"\n}\n\n```\n\n\ngets transformed into the following Cypher query:\n\n```\nMATCH (from:Foo:Bar {key: event.from.ids.key})\nMATCH (to:FooBar {otherKey: event.to.ids.otherKey})\nCREATE (from)-[r:MY_REL]-\u003e(to)\nSET r \u003d event.properties\n```\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:28:09.224",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eRelationship Example\u003c/h2\u003e\n\u003cp\u003eThe following JSON:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e{\n  \u0026quot;op\u0026quot;: \u0026quot;create\u0026quot;,\n  \u0026quot;properties\u0026quot;: {\n    \u0026quot;foo\u0026quot;: \u0026quot;rel-value\u0026quot;,\n    \u0026quot;key\u0026quot;: 1\n  },\n  \u0026quot;rel_type\u0026quot;: \u0026quot;MY_REL\u0026quot;,\n  \u0026quot;from\u0026quot;: {\n    \u0026quot;ids\u0026quot;: {\u0026quot;key\u0026quot;: 1},\n    \u0026quot;labels\u0026quot;: [\u0026quot;Foo\u0026quot;,\u0026quot;Bar\u0026quot;]\n  },\n  \u0026quot;to\u0026quot;: {\n    \u0026quot;ids\u0026quot;: {\u0026quot;otherKey\u0026quot;:1},\n    \u0026quot;labels\u0026quot;: [\u0026quot;FooBar\u0026quot;]\n  },\n  \u0026quot;type\u0026quot;:\u0026quot;relationship\u0026quot;\n}\n\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003egets transformed into the following Cypher query:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eMATCH (from:Foo:Bar {key: event.from.ids.key})\nMATCH (to:FooBar {otherKey: event.to.ids.otherKey})\nCREATE (from)-[r:MY_REL]-\u0026gt;(to)\nSET r \u003d event.properties\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601051018243_1297068783",
+      "id": "20200925-162338_1335458804",
+      "dateCreated": "2020-09-25 16:23:38.243",
+      "dateStarted": "2020-09-25 16:28:09.225",
+      "dateFinished": "2020-09-25 16:28:09.244",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCREATE DATABASE cud",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:34:17.898",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1601051289174_-2121592749",
+      "id": "20200925-162809_354288917",
+      "dateCreated": "2020-09-25 16:28:09.174",
+      "dateStarted": "2020-09-25 16:34:17.931",
+      "dateFinished": "2020-09-25 16:34:43.455",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_cud\nmatch (n) return count(n)",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:50:47.051",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "count(n)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "count(n)\n0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601052027924_1128281777",
+      "id": "20200925-164027_4023376",
+      "dateCreated": "2020-09-25 16:40:27.924",
+      "dateStarted": "2020-09-25 16:50:41.855",
+      "dateFinished": "2020-09-25 16:50:46.484",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# Create a Producer\n\n```\ndocker exec -it broker kafka-console-producer --topic cudtopic \\\n  --broker-list broker:9092\n```\n\n## Send the data\n\n```\n{\"op\":\"merge\",\"properties\":{\"name\":\"Andrea\",\"surname\":\"Santurbano\"},\"ids\":{\"ssn\":\"A1B34\"},\"labels\":[\"Person\",\"Customer\"],\"type\":\"node\"}\n```",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:51:07.550",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCreate a Producer\u003c/h1\u003e\n\u003cpre\u003e\u003ccode\u003edocker exec -it broker kafka-console-producer --topic cudtopic \\\n  --broker-list broker:9092\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2\u003eSend the data\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003e{\u0026quot;op\u0026quot;:\u0026quot;merge\u0026quot;,\u0026quot;properties\u0026quot;:{\u0026quot;name\u0026quot;:\u0026quot;Andrea\u0026quot;,\u0026quot;surname\u0026quot;:\u0026quot;Santurbano\u0026quot;},\u0026quot;ids\u0026quot;:{\u0026quot;ssn\u0026quot;:\u0026quot;A1B34\u0026quot;},\u0026quot;labels\u0026quot;:[\u0026quot;Person\u0026quot;,\u0026quot;Customer\u0026quot;],\u0026quot;type\u0026quot;:\u0026quot;node\u0026quot;}\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601051657898_2083084718",
+      "id": "20200925-163417_152083522",
+      "dateCreated": "2020-09-25 16:34:17.898",
+      "dateStarted": "2020-09-25 16:51:07.550",
+      "dateFinished": "2020-09-25 16:51:09.820",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_cud\nmatch (n) return n",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:51:45.165",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "network",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "label": "string",
+                      "name": "string",
+                      "surname": "string",
+                      "ssn": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined",
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "NETWORK",
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"surname\":\"Santurbano\",\"ssn\":\"A1B34\"},\"label\":\"Person\"}],\"edges\":[],\"labels\":{\"Person\":\"#D96778\",\"Customer\":\"#77B704\"},\"types\":[],\"directed\":true}"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601052045418_1045104855",
+      "id": "20200925-164045_1833614231",
+      "dateCreated": "2020-09-25 16:40:45.418",
+      "dateStarted": "2020-09-25 16:51:39.660",
+      "dateFinished": "2020-09-25 16:51:40.033",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:51:31.929",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1601052691925_-688208781",
+      "id": "20200925-165131_1843451291",
+      "dateCreated": "2020-09-25 16:51:31.925",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Master Apache Kafka/Sink/CUD File Format",
+  "id": "2FKT4P6YJ",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "neo4j_cud:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

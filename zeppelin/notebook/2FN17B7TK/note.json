@@ -1,0 +1,491 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n# Ingestion via JSON projection\n\n\nYou can extract nodes and relationships from a JSON by providing a extraction pattern.\nEach property can be prefixed with:\n* `!`: identify the id (could be more than one property), it\u0027s *mandatory*\n* `-`: exclude the property from the extraction\n* Labels can be chained via `:`\n\nYou can leverage the feature with the following configuration properties:\n\n* `streams.sink.topic.pattern.node.\u003cTOPIC\u003e\u003d\u003cPATTERN\u003e`\n* `streams.sink.topic.pattern.node.\u003cTOPIC\u003e.to.\u003cDB_NAME\u003e\u003d\u003cPATTERN\u003e`\n* `streams.sink.topic.pattern.relationship.\u003cTOPIC\u003e\u003d\u003cPATTERN\u003e`\n* `streams.sink.topic.pattern.relationship.\u003cTOPIC\u003e.to.\u003cDB_NAME\u003e\u003d\u003cPATTERN\u003e`\n\n\nThis ingestion strategy come out with the support to the Tombstone Record, in order to leverage it your event should contain as key the record that you want to delete and `null` for the value.\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 15:22:12.109",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eIngestion via JSON projection\u003c/h1\u003e\n\u003cp\u003eYou can extract nodes and relationships from a JSON by providing a extraction pattern.\u003cbr/\u003eEach property can be prefixed with:\u003cbr/\u003e* \u003ccode\u003e!\u003c/code\u003e: identify the id (could be more than one property), it\u0026rsquo;s \u003cem\u003emandatory\u003c/em\u003e\u003cbr/\u003e* \u003ccode\u003e-\u003c/code\u003e: exclude the property from the extraction\u003cbr/\u003e* Labels can be chained via \u003ccode\u003e:\u003c/code\u003e\u003c/p\u003e\n\u003cp\u003eYou can leverage the feature with the following configuration properties:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003ccode\u003estreams.sink.topic.pattern.node.\u0026lt;TOPIC\u0026gt;\u003d\u0026lt;PATTERN\u0026gt;\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003estreams.sink.topic.pattern.node.\u0026lt;TOPIC\u0026gt;.to.\u0026lt;DB_NAME\u0026gt;\u003d\u0026lt;PATTERN\u0026gt;\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003estreams.sink.topic.pattern.relationship.\u0026lt;TOPIC\u0026gt;\u003d\u0026lt;PATTERN\u0026gt;\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003e\u003ccode\u003estreams.sink.topic.pattern.relationship.\u0026lt;TOPIC\u0026gt;.to.\u0026lt;DB_NAME\u0026gt;\u003d\u0026lt;PATTERN\u0026gt;\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eThis ingestion strategy come out with the support to the Tombstone Record, in order to leverage it your event should contain as key the record that you want to delete and \u003ccode\u003enull\u003c/code\u003e for the value.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601047172663_2039867927",
+      "id": "20200925-151932_1215740043",
+      "dateCreated": "2020-09-25 15:19:32.663",
+      "dateStarted": "2020-09-25 15:22:12.118",
+      "dateFinished": "2020-09-25 15:22:14.386",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nIn the Docker Compose file you\u0027ll find the following properties:\n\n```\nNEO4J_streams_sink_topic_pattern_node_jsonprojuser_to_jsonprojection: User{!userId}\nNEO4J_streams_sink_topic_pattern_node_jsonprojproduct_to_jsonprojection: Product{!productId}\nNEO4J_streams_sink_topic_pattern_relationship_jsonprojbought_to_jsonprojection: (:User:Customer{!userId})-[:BOUGHT]-\u003e(:Product{!productId})\n```",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:04:45.807",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eIn the Docker Compose file you\u0026rsquo;ll find the following properties:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eNEO4J_streams_sink_topic_pattern_node_jsonprojuser_to_jsonprojection: User{!userId}\nNEO4J_streams_sink_topic_pattern_node_jsonprojproduct_to_jsonprojection: Product{!productId}\nNEO4J_streams_sink_topic_pattern_relationship_jsonprojbought_to_jsonprojection: (:User:Customer{!userId})-[:BOUGHT]-\u0026gt;(:Product{!productId})\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601047332048_-1951800733",
+      "id": "20200925-152212_260638432",
+      "dateCreated": "2020-09-25 15:22:12.048",
+      "dateStarted": "2020-09-25 16:04:45.818",
+      "dateFinished": "2020-09-25 16:04:48.202",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j\nCREATE DATABASE jsonprojection",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 15:26:23.336",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1601047384287_-1757240141",
+      "id": "20200925-152304_336698329",
+      "dateCreated": "2020-09-25 15:23:04.287",
+      "dateStarted": "2020-09-25 15:26:23.389",
+      "dateFinished": "2020-09-25 15:27:06.272",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_jsonprojection\nmatch (n) return count(n)",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:04:52.265",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "count(n)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "count(n)\n0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601048487426_-825046085",
+      "id": "20200925-154127_2048013883",
+      "dateCreated": "2020-09-25 15:41:27.426",
+      "dateStarted": "2020-09-25 16:04:52.342",
+      "dateFinished": "2020-09-25 16:04:57.057",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# Create a Producer\n\n```\ndocker exec -it broker kafka-console-producer --topic jsonprojuser \\\n  --broker-list broker:9092\n```\n\n## Send the data\n\n```\n{\"userId\": 1, \"name\": \"Andrea\", \"surname\": \"Santurbano\", \"address\": {\"city\": \"Venice\", \"cap\": \"30100\"}}\n```",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 15:56:12.929",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCreate a Producer\u003c/h1\u003e\n\u003cpre\u003e\u003ccode\u003edocker exec -it broker kafka-console-producer --topic jsonprojuser \\\n  --broker-list broker:9092\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2\u003eSend the data\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003e{\u0026quot;userId\u0026quot;: 1, \u0026quot;name\u0026quot;: \u0026quot;Andrea\u0026quot;, \u0026quot;surname\u0026quot;: \u0026quot;Santurbano\u0026quot;, \u0026quot;address\u0026quot;: {\u0026quot;city\u0026quot;: \u0026quot;Venice\u0026quot;, \u0026quot;cap\u0026quot;: \u0026quot;30100\u0026quot;}}\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601048418266_-800084724",
+      "id": "20200925-154018_1385898090",
+      "dateCreated": "2020-09-25 15:40:18.266",
+      "dateStarted": "2020-09-25 15:56:12.929",
+      "dateFinished": "2020-09-25 15:56:12.951",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# Create a Producer\n\n```\ndocker exec -it broker kafka-console-producer --topic jsonprojproduct \\\n  --broker-list broker:9092\n```\n\n## Send the data\n\n```\n{\"productId\": 100, \"name\": \"My Awesome product!\"}\n```",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:12:41.891",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCreate a Producer\u003c/h1\u003e\n\u003cpre\u003e\u003ccode\u003edocker exec -it broker kafka-console-producer --topic jsonprojproduct \\\n  --broker-list broker:9092\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2\u003eSend the data\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003e{\u0026quot;productId\u0026quot;: 100, \u0026quot;name\u0026quot;: \u0026quot;My Awesome product!\u0026quot;}\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601048667275_-438874531",
+      "id": "20200925-154427_1834176292",
+      "dateCreated": "2020-09-25 15:44:27.276",
+      "dateStarted": "2020-09-25 16:12:41.906",
+      "dateFinished": "2020-09-25 16:12:44.289",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_jsonprojection\nmatch (n) return n",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:13:15.457",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "network",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "label": "string",
+                      "name": "string",
+                      "address.city": "string",
+                      "userId": "string",
+                      "surname": "string",
+                      "address.cap": "string",
+                      "productId": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "NETWORK",
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"address.city\":\"Venice\",\"userId\":1,\"surname\":\"Santurbano\",\"address.cap\":\"30100\"},\"label\":\"User\"},{\"id\":1,\"data\":{\"productId\":100,\"name\":\"My Awesome product!\"},\"label\":\"Product\"}],\"edges\":[],\"labels\":{\"User\":\"#756C1A\",\"Product\":\"#EAEF22\"},\"types\":[],\"directed\":true}"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601047583336_-985733945",
+      "id": "20200925-152623_479719367",
+      "dateCreated": "2020-09-25 15:26:23.336",
+      "dateStarted": "2020-09-25 16:13:09.122",
+      "dateFinished": "2020-09-25 16:13:13.742",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# Create a Producer\n\n```\ndocker exec -it broker kafka-console-producer --topic jsonprojbought \\\n  --broker-list broker:9092\n```\n\n## Send the data\n\n```\n{\"userId\": 1, \"productId\": 100, \"price\": 10, \"currency\": \"€\", \"quantity\": 2, \"shippingAddress\": {\"city\": \"Venice\", \"cap\": \"30100\"}}\n```",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:15:28.482",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCreate a Producer\u003c/h1\u003e\n\u003cpre\u003e\u003ccode\u003edocker exec -it broker kafka-console-producer --topic jsonprojbought \\\n  --broker-list broker:9092\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2\u003eSend the data\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003e{\u0026quot;userId\u0026quot;: 1, \u0026quot;productId\u0026quot;: 100, \u0026quot;price\u0026quot;: 10, \u0026quot;currency\u0026quot;: \u0026quot;€\u0026quot;, \u0026quot;quantity\u0026quot;: 2, \u0026quot;shippingAddress\u0026quot;: {\u0026quot;city\u0026quot;: \u0026quot;Venice\u0026quot;, \u0026quot;cap\u0026quot;: \u0026quot;30100\u0026quot;}}\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601048527402_-1339204322",
+      "id": "20200925-154207_1283111698",
+      "dateCreated": "2020-09-25 15:42:07.402",
+      "dateStarted": "2020-09-25 16:15:28.488",
+      "dateFinished": "2020-09-25 16:15:28.514",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_jsonprojection\nmatch (n)-[r]-\u003e(m) return *",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:17:56.750",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "network",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "label": "string",
+                      "productId": "string",
+                      "userId": "string",
+                      "currency": "string",
+                      "quantity": "string",
+                      "shippingAddress.city": "string",
+                      "shippingAddress.cap": "string",
+                      "price": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "NETWORK",
+            "data": "{\"nodes\":[{\"id\":1,\"data\":{\"productId\":100},\"label\":\"Product\"},{\"id\":2,\"data\":{\"userId\":1},\"label\":\"User\"}],\"edges\":[{\"source\":2,\"target\":1,\"id\":0,\"data\":{\"currency\":\"€\",\"quantity\":2,\"shippingAddress.city\":\"Venice\",\"shippingAddress.cap\":\"30100\",\"price\":10},\"label\":\"BOUGHT\"}],\"labels\":{\"User\":\"#A3E092\",\"Product\":\"#BAE8E7\",\"Customer\":\"#D38574\"},\"types\":[\"BOUGHT\"],\"directed\":true}"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601048749835_-1686489928",
+      "id": "20200925-154549_936547163",
+      "dateCreated": "2020-09-25 15:45:49.835",
+      "dateStarted": "2020-09-25 16:17:49.964",
+      "dateFinished": "2020-09-25 16:17:54.327",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_jsonprojection\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:13:58.855",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1601050438852_1424947523",
+      "id": "20200925-161358_1358399266",
+      "dateCreated": "2020-09-25 16:13:58.852",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Master Apache Kafka/Sink/JSON Pattern Extraction",
+  "id": "2FN17B7TK",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": [],
+    "neo4j_jsonprojection:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

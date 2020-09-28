@@ -1,0 +1,747 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n\n# How to test it\n\nGo to the command line and create a consumer\n\n```\ndocker exec -it broker kafka-console-consumer --topic my-topic \\\n  --bootstrap-server broker:9092\n```\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-01-19 09:33:49.925",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eHow to test it\u003c/h1\u003e\n\u003cp\u003eGo to the command line and create a consumer\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003edocker exec -it broker kafka-console-consumer --topic my-topic \\\n  --bootstrap-server broker:9092\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1547890429924_1509854467",
+      "id": "20181213-074655_1776854911",
+      "dateCreated": "2019-01-19 09:33:49.924",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# streams.publish\nThis procedure allows custom message streaming from Neo4j to the configured environment by using the underlying configured Producer.\n\nIt takes two variable in input and returns nothing (as it sends its payload asynchronously to the stream):\n\n* **topic**, _type String_: where will be published the data;\n* **payload**, _type Object_: what you want to stream.\n\n## How to use it\n\n```\nCALL streams.publish(\u0027my-topic\u0027, \u0027Hello World from Neo4j!\u0027)\n```",
+      "user": "anonymous",
+      "dateUpdated": "2019-01-27 17:59:19.079",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003estreams.publish\u003c/h1\u003e\n\u003cp\u003eThis procedure allows custom message streaming from Neo4j to the configured environment by using the underlying configured Producer.\u003c/p\u003e\n\u003cp\u003eIt takes two variable in input and returns nothing (as it sends its payload asynchronously to the stream):\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003cstrong\u003etopic\u003c/strong\u003e, \u003cem\u003etype String\u003c/em\u003e: where will be published the data;\u003c/li\u003e\n  \u003cli\u003e\u003cstrong\u003epayload\u003c/strong\u003e, \u003cem\u003etype Object\u003c/em\u003e: what you want to stream.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2\u003eHow to use it\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003eCALL streams.publish(\u0026#39;my-topic\u0026#39;, \u0026#39;Hello World from Neo4j!\u0026#39;)\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1547890429926_1775886922",
+      "id": "20181213-075522_2039443508",
+      "dateCreated": "2019-01-19 09:33:49.926",
+      "dateStarted": "2019-01-27 17:59:19.079",
+      "dateFinished": "2019-01-27 17:59:19.101",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Publish your first event",
+      "text": "%neo4j\nCALL streams.publish(\u0027my-topic\u0027, \u0027Hello World from Neo4j!\u0027)",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-28 12:07:01.399",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "title": true,
+        "results": {},
+        "enabled": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1547890429927_-1202575310",
+      "id": "20181212-222435_1247313594",
+      "dateCreated": "2019-01-19 09:33:49.927",
+      "dateStarted": "2020-09-28 12:07:01.436",
+      "dateFinished": "2020-09-28 12:07:01.532",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nThe published message has the following structure:\n\n`{\"payload\":\"Hello World from Neo4j!\"}`",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-28 12:07:42.231",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe published message has the following structure:\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003e{\u0026quot;payload\u0026quot;:\u0026quot;Hello World from Neo4j!\u0026quot;}\u003c/code\u003e\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601294828998_-1664270148",
+      "id": "20200928-120708_515073107",
+      "dateCreated": "2020-09-28 12:07:08.998",
+      "dateStarted": "2020-09-28 12:07:42.231",
+      "dateFinished": "2020-09-28 12:07:42.250",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Publish a JSON",
+      "text": "%neo4j\nCALL streams.publish(\u0027my-topic\u0027, [{name: \"Andrea\", surname: \"Santurbano\"}, {name: \"Michael\", surname: \"Hunger\"}])",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-28 12:08:05.506",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "title": true,
+        "results": {},
+        "enabled": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1547890429928_-1423164887",
+      "id": "20181213-174451_1136633655",
+      "dateCreated": "2019-01-19 09:33:49.928",
+      "dateStarted": "2020-09-28 12:08:05.550",
+      "dateFinished": "2020-09-28 12:08:05.604",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nThe published message has the following structure:\n\n`{\"payload\":[{\"surname\":\"Santurbano\",\"name\":\"Andrea\"},{\"surname\":\"Hunger\",\"name\":\"Michael\"}]}`",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-28 12:08:39.499",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eThe published message has the following structure:\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003e{\u0026quot;payload\u0026quot;:[{\u0026quot;surname\u0026quot;:\u0026quot;Santurbano\u0026quot;,\u0026quot;name\u0026quot;:\u0026quot;Andrea\u0026quot;},{\u0026quot;surname\u0026quot;:\u0026quot;Hunger\u0026quot;,\u0026quot;name\u0026quot;:\u0026quot;Michael\u0026quot;}]}\u003c/code\u003e\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601294876958_549688488",
+      "id": "20200928-120756_230436847",
+      "dateCreated": "2020-09-28 12:07:56.958",
+      "dateStarted": "2020-09-28 12:08:39.499",
+      "dateFinished": "2020-09-28 12:08:39.513",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# streams.consume\nThis procedure allows to consume messages from a given topic.\n\nIt takes two variable in input, and returns a list of collected events:\n\n* **topic**, _type String_: where you want to consume the data;\n* **config**, _type Map\u003cString, Object\u003e_: the configuration parameters.\n\n\n## How to use it:\n\nImagine you have a producer that publish events like this `{\"name\": \"Andrea\", \"surname\": \"Santurbano\"}`, we can create user nodes in this way:\n```\nCALL streams.consume(\u0027my-topic\u0027, {\u003cconfig\u003e}) YIELD event\nCREATE (p:Person{firstName: event.data.name, lastName: event.data.surname})\n```\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-01-27 17:59:09.772",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003estreams.consume\u003c/h1\u003e\n\u003cp\u003eThis procedure allows to consume messages from a given topic.\u003c/p\u003e\n\u003cp\u003eIt takes two variable in input, and returns a list of collected events:\u003c/p\u003e\n\u003cul\u003e\n  \u003cli\u003e\u003cstrong\u003etopic\u003c/strong\u003e, \u003cem\u003etype String\u003c/em\u003e: where you want to consume the data;\u003c/li\u003e\n  \u003cli\u003e\u003cstrong\u003econfig\u003c/strong\u003e, \u003cem\u003etype Map\u0026lt;String, Object\u0026gt;\u003c/em\u003e: the configuration parameters.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2\u003eHow to use it:\u003c/h2\u003e\n\u003cp\u003eImagine you have a producer that publish events like this \u003ccode\u003e{\u0026quot;name\u0026quot;: \u0026quot;Andrea\u0026quot;, \u0026quot;surname\u0026quot;: \u0026quot;Santurbano\u0026quot;}\u003c/code\u003e, we can create user nodes in this way:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eCALL streams.consume(\u0026#39;my-topic\u0026#39;, {\u0026lt;config\u0026gt;}) YIELD event\nCREATE (p:Person{firstName: event.data.name, lastName: event.data.surname})\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1547890429929_398531193",
+      "id": "20181213-075725_173270105",
+      "dateCreated": "2019-01-19 09:33:49.929",
+      "dateStarted": "2019-01-27 17:59:09.767",
+      "dateFinished": "2019-01-27 17:59:09.789",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# Create a Producer\n\n```\ndocker exec -it broker kafka-console-producer --topic persons-topic \\\n  --broker-list broker:9092\n```\n\n## Send the data\n\n```\n[{\"name\": \"Andrea\", \"surname\": \"Santurbano\"}, {\"name\": \"Michael\", \"surname\": \"Hunger\"}]\n```",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 17:18:34.766",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCreate a Producer\u003c/h1\u003e\n\u003cpre\u003e\u003ccode\u003edocker exec -it broker kafka-console-producer --topic persons-topic \\\n  --broker-list broker:9092\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2\u003eSend the data\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003e[{\u0026quot;name\u0026quot;: \u0026quot;Andrea\u0026quot;, \u0026quot;surname\u0026quot;: \u0026quot;Santurbano\u0026quot;}, {\u0026quot;name\u0026quot;: \u0026quot;Michael\u0026quot;, \u0026quot;surname\u0026quot;: \u0026quot;Hunger\u0026quot;}]\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1547890429929_-2082830274",
+      "id": "20190106-234239_1248854726",
+      "dateCreated": "2019-01-19 09:33:49.929",
+      "dateStarted": "2020-09-25 17:18:34.765",
+      "dateFinished": "2020-09-25 17:18:34.776",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Consume your data from topic",
+      "text": "%neo4j\ncall streams.consume(\u0027persons-topic\u0027, {timeout: 5000}) YIELD event\nunwind event.data as elem\nreturn elem",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-28 12:14:41.225",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "title": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "elem.name": "string",
+                      "elem.surname": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "elem.name\telem.surname\nAndrea\tSanturbano\nMichael\tHunger\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1547890429930_38054867",
+      "id": "20181212-222500_1686009915",
+      "dateCreated": "2019-01-19 09:33:49.930",
+      "dateStarted": "2020-09-28 12:14:41.258",
+      "dateFinished": "2020-09-28 12:14:46.347",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Show the Sink Status",
+      "text": "%neo4j\ncall streams.sink.status()",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-28 12:15:27.957",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/undefined",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "name": "string",
+                      "value": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true,
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "name\tvalue\n\"status\"\t\"RUNNING\"\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1547890429931_67771610",
+      "id": "20181212-222533_201247004",
+      "dateCreated": "2019-01-19 09:33:49.931",
+      "dateStarted": "2020-09-28 12:15:27.987",
+      "dateFinished": "2020-09-28 12:15:28.004",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Stop the Sink",
+      "text": "%neo4j\ncall streams.sink.stop()",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-28 12:15:03.979",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "name": "string",
+                      "value": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "name\tvalue\n\"status\"\t\"STOPPED\"\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1600950561822_131585193",
+      "id": "20200924-122921_958441777",
+      "dateCreated": "2020-09-24 12:29:21.822",
+      "dateStarted": "2020-09-28 12:15:04.024",
+      "dateFinished": "2020-09-28 12:15:04.089",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Show the Streams configuration",
+      "text": "%neo4j\ncall streams.sink.config()",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-28 12:15:10.429",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "name": "string",
+                      "value": "string",
+                      "value.labelName": "string",
+                      "value.idName": "string",
+                      "value.knows": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "name\tvalue\tvalue.labelName\tvalue.idName\tvalue.knows\n\"streams.sink.errors\"\t\t\t\t\n\"streams.cluster.only\"\tFALSE\t\t\t\n\"streams.sink.source.id.strategy.config\"\t\tSourceEvent\tsourceId\t\n\"streams.sink.topic.cypher\"\t\t\t\tMERGE (source:Person{id: event.source.id}) SET source +\u003d event.source.properties MERGE (target:Person{id: event.target.id}) SET target +\u003d event.target.properties MERGE (source)-[know:KNOWS]-\u003e(target) SET know +\u003d event.properties\n\"streams.sink.topic.cud\"\t[]\t\t\t\n\"streams.sink.topic.cdc.schema\"\t[]\t\t\t\n\"streams.sink.topic.cdc.sourceId\"\t[]\t\t\t\n\"streams.sink.topic.pattern.node\"\t\t\t\t\n\"streams.sink.topic.pattern.relationship\"\t\t\t\t\n\"invalid_topics\"\t[]\t\t\t\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601020082956_-1205339683",
+      "id": "20200925-074802_1450060696",
+      "dateCreated": "2020-09-25 07:48:02.956",
+      "dateStarted": "2020-09-28 12:15:10.182",
+      "dateFinished": "2020-09-28 12:15:10.283",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Start the Sink again",
+      "text": "%neo4j\ncall streams.sink.start()",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-28 12:15:20.400",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "name": "string",
+                      "value": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "name\tvalue\n\"status\"\t\"RUNNING\"\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601020094577_266414397",
+      "id": "20200925-074814_2026667138",
+      "dateCreated": "2020-09-25 07:48:14.577",
+      "dateStarted": "2020-09-28 12:15:20.452",
+      "dateFinished": "2020-09-28 12:15:20.571",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n# How you can use the Neo4j Streams Sink lifecycle procedures\n\nYou can use them in order to change the ingestion query at runtime with the following steps:\n\n1. Stop the Sink with `CALL streams.sink.stop()`\n2. Update the Cypher Template Query in the `neo4j.conf` file\n3. Start again the Sink with `CALL streams.sink.start()`\n4. Check that the ingestion proceed with the new query",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-28 17:29:46.278",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eHow you can use the Neo4j Streams Sink lifecycle procedures\u003c/h1\u003e\n\u003cp\u003eYou can use them in order to change the ingestion query at runtime with the following steps:\u003c/p\u003e\n\u003col\u003e\n  \u003cli\u003eStop the Sink with \u003ccode\u003eCALL streams.sink.stop()\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003eUpdate the Cypher Template Query in the \u003ccode\u003eneo4j.conf\u003c/code\u003e file\u003c/li\u003e\n  \u003cli\u003eStart again the Sink with \u003ccode\u003eCALL streams.sink.start()\u003c/code\u003e\u003c/li\u003e\n  \u003cli\u003eCheck that the ingestion proceed with the new query\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601020110389_1548645169",
+      "id": "20200925-074830_1444418440",
+      "dateCreated": "2020-09-25 07:48:30.389",
+      "dateStarted": "2020-09-28 17:29:46.291",
+      "dateFinished": "2020-09-28 17:29:49.609",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-28 17:29:46.079",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1601314186068_1914130954",
+      "id": "20200928-172946_397251979",
+      "dateCreated": "2020-09-28 17:29:46.068",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Master Apache Kafka/Procedures/Streams Procedures",
+  "id": "2E1QP8SJH",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "neo4j:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
