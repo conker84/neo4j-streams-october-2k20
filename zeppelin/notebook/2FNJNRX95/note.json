@@ -88,7 +88,7 @@
       "title": "Check the db is empty",
       "text": "%neo4j\nmatch (n) return count(n)",
       "user": "anonymous",
-      "dateUpdated": "2020-09-28 17:47:08.655",
+      "dateUpdated": "2020-09-28 17:56:59.089",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -148,15 +148,15 @@
       "jobName": "paragraph_1601021484585_1264212929",
       "id": "20200925-081124_1496615208",
       "dateCreated": "2020-09-25 08:11:24.585",
-      "dateStarted": "2020-09-28 17:47:08.696",
-      "dateFinished": "2020-09-28 17:47:15.074",
+      "dateStarted": "2020-09-28 17:56:59.144",
+      "dateFinished": "2020-09-28 17:57:03.425",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n# Create a Producer\n\n```\ndocker exec -it broker kafka-console-producer --topic knows \\\n  --broker-list broker:9092\n```\n\n## Send the data\n\n```\n{\"source\": {\"id\": 1, \"properties\": {\"name\": \"Andrea\", \"surname\": \"Santubano\"}}, \"target\": {\"id\": 2, \"properties\": { \"name\": \"David\", \"surname\": \"Allen\"}}, \"properties\": {\"since\": 2018, \"project\": \"Streams\"}}\n```",
+      "text": "%md\n# Create a Producer\n\n```\ndocker exec -it broker kafka-console-producer --topic knows \\\n  --broker-list broker:9092\n```\n\n## Send the data\n\n```\n{\"source\": {\"id\": 1, \"properties\": {\"name\": \"Andrea\", \"surname\": \"Santubano\"}}, \"target\": {\"id\": 2, \"properties\": {\"name\": \"David\", \"surname\": \"Allen\"}}, \"properties\": {\"since\": 2018, \"project\": \"Streams\"}}\n```",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 17:19:47.569",
+      "dateUpdated": "2020-09-28 20:54:25.292",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -181,7 +181,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCreate a Producer\u003c/h1\u003e\n\u003cpre\u003e\u003ccode\u003edocker exec -it broker kafka-console-producer --topic knows \\\n  --broker-list broker:9092\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2\u003eSend the data\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003e{\u0026quot;source\u0026quot;: {\u0026quot;id\u0026quot;: 1, \u0026quot;properties\u0026quot;: {\u0026quot;name\u0026quot;: \u0026quot;Andrea\u0026quot;, \u0026quot;surname\u0026quot;: \u0026quot;Santubano\u0026quot;}}, \u0026quot;target\u0026quot;: {\u0026quot;id\u0026quot;: 2, \u0026quot;properties\u0026quot;: { \u0026quot;name\u0026quot;: \u0026quot;David\u0026quot;, \u0026quot;surname\u0026quot;: \u0026quot;Allen\u0026quot;}}, \u0026quot;properties\u0026quot;: {\u0026quot;since\u0026quot;: 2018, \u0026quot;project\u0026quot;: \u0026quot;Streams\u0026quot;}}\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCreate a Producer\u003c/h1\u003e\n\u003cpre\u003e\u003ccode\u003edocker exec -it broker kafka-console-producer --topic knows \\\n  --broker-list broker:9092\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2\u003eSend the data\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003e{\u0026quot;source\u0026quot;: {\u0026quot;id\u0026quot;: 1, \u0026quot;properties\u0026quot;: {\u0026quot;name\u0026quot;: \u0026quot;Andrea\u0026quot;, \u0026quot;surname\u0026quot;: \u0026quot;Santubano\u0026quot;}}, \u0026quot;target\u0026quot;: {\u0026quot;id\u0026quot;: 2, \u0026quot;properties\u0026quot;: {\u0026quot;name\u0026quot;: \u0026quot;David\u0026quot;, \u0026quot;surname\u0026quot;: \u0026quot;Allen\u0026quot;}}, \u0026quot;properties\u0026quot;: {\u0026quot;since\u0026quot;: 2018, \u0026quot;project\u0026quot;: \u0026quot;Streams\u0026quot;}}\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -189,8 +189,8 @@
       "jobName": "paragraph_1601021255139_-1082925818",
       "id": "20200925-080735_574506222",
       "dateCreated": "2020-09-25 08:07:35.139",
-      "dateStarted": "2020-09-25 17:19:47.570",
-      "dateFinished": "2020-09-25 17:19:47.589",
+      "dateStarted": "2020-09-28 20:54:25.292",
+      "dateFinished": "2020-09-28 20:54:25.310",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -198,7 +198,7 @@
       "title": "Show the ingested data",
       "text": "%neo4j\nmatch (n)-[r]-(m) return *",
       "user": "anonymous",
-      "dateUpdated": "2020-09-28 17:48:00.592",
+      "dateUpdated": "2020-09-28 20:54:39.965",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -206,7 +206,7 @@
         "results": {
           "0": {
             "graph": {
-              "mode": "table",
+              "mode": "network",
               "height": 300.0,
               "optionOpen": false,
               "setting": {
@@ -253,30 +253,137 @@
       },
       "results": {
         "code": "SUCCESS",
-        "msg": []
+        "msg": [
+          {
+            "type": "NETWORK",
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"id\":1,\"surname\":\"Santubano\"},\"label\":\"Person\"},{\"id\":1,\"data\":{\"name\":\"David\",\"id\":2,\"surname\":\"Allen\"},\"label\":\"Person\"}],\"edges\":[{\"source\":0,\"target\":1,\"id\":0,\"data\":{\"project\":\"Streams\",\"since\":2018},\"label\":\"KNOWS\"}],\"labels\":{\"Person\":\"#7BBC7A\"},\"types\":[\"KNOWS\"],\"directed\":true}"
+          }
+        ]
       },
       "apps": [],
       "jobName": "paragraph_1601021519381_1738226264",
       "id": "20200925-081159_1177695698",
       "dateCreated": "2020-09-25 08:11:59.381",
-      "dateStarted": "2020-09-28 17:48:00.624",
-      "dateFinished": "2020-09-28 17:48:00.646",
+      "dateStarted": "2020-09-28 20:54:40.008",
+      "dateFinished": "2020-09-28 20:54:44.231",
       "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n# Try to write your custom Cypher query\n\nIn the Docker compose file you will find the follwing commented environment variable:\n\n```\n# NEO4J_streams_sink_topic_cypher_exercise: \"\u003cREPLACE WITH YOUR CUSTOM CYPHER QUERY\u003e\"\n```\n\nYou can un-comment and fill it with you custom query and then reload the Neo4j service only with following Docker command:\n\n`docker-compose up -d --no-deps neo4j`\n\nAfter the Neo4j is up-and-running again you can test your query by sending the JSON data with the follwoing producer:\n\n```\ndocker exec -it broker kafka-console-producer --topic exercise \\\n  --broker-list broker:9092\n```",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-28 18:08:13.952",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eTry to write your custom Cypher query\u003c/h1\u003e\n\u003cp\u003eIn the Docker compose file you will find the follwing commented environment variable:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e# NEO4J_streams_sink_topic_cypher_exercise: \u0026quot;\u0026lt;REPLACE WITH YOUR CUSTOM CYPHER QUERY\u0026gt;\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eYou can un-comment and fill it with you custom query and then reload the Neo4j service only with following Docker command:\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003edocker-compose up -d --no-deps neo4j\u003c/code\u003e\u003c/p\u003e\n\u003cp\u003eAfter the Neo4j is up-and-running again you can test your query by sending the JSON data with the follwoing producer:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003edocker exec -it broker kafka-console-producer --topic exercise \\\n  --broker-list broker:9092\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601021584979_-34731894",
+      "id": "20200925-081304_2082196899",
+      "dateCreated": "2020-09-25 08:13:04.979",
+      "dateStarted": "2020-09-28 18:08:13.952",
+      "dateFinished": "2020-09-28 18:08:14.036",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Write here your Cypher query in order to test the how the ingestion went",
+      "text": "%neo4j\n// write your cypher query here",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-28 18:10:46.957",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "1": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1601316493892_1543590947",
+      "id": "20200928-180813_1136218939",
+      "dateCreated": "2020-09-28 18:08:13.892",
+      "dateStarted": "2020-09-28 18:10:29.420",
+      "dateFinished": "2020-09-28 18:10:29.537",
+      "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j\n",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 08:13:04.982",
+      "dateUpdated": "2020-09-28 18:09:29.569",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1601021584979_-34731894",
-      "id": "20200925-081304_2082196899",
-      "dateCreated": "2020-09-25 08:13:04.979",
+      "jobName": "paragraph_1601316569565_1780043880",
+      "id": "20200928-180929_514611448",
+      "dateCreated": "2020-09-28 18:09:29.566",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }

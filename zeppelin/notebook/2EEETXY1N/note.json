@@ -42,10 +42,44 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "title": "Create the Person constraint",
-      "text": "%neo4j\ncreate constraint on (p:Person) assert p.id is unique;",
+      "text": "%neo4j\nCREATE DATABASE polyglot",
       "user": "anonymous",
-      "dateUpdated": "2020-04-15 15:46:25.768",
+      "dateUpdated": "2020-09-28 20:01:47.564",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1601320013672_-224652728",
+      "id": "20200928-190653_441992225",
+      "dateCreated": "2020-09-28 19:06:53.672",
+      "dateStarted": "2020-09-28 20:01:47.854",
+      "dateFinished": "2020-09-28 20:01:51.314",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Create the Person constraint",
+      "text": "%neo4j_polyglot\ncreate constraint on (p:Person) assert p.id is unique;",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-28 20:01:52.339",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -72,16 +106,16 @@
       "jobName": "paragraph_1560347238668_-1182056218",
       "id": "20190612-134718_1033694670",
       "dateCreated": "2019-06-12 13:47:18.668",
-      "dateStarted": "2020-04-15 15:46:26.900",
-      "dateFinished": "2020-04-15 15:46:30.676",
+      "dateStarted": "2020-09-28 20:01:52.444",
+      "dateFinished": "2020-09-28 20:01:55.568",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "Create the Movie constraint",
-      "text": "%neo4j\ncreate constraint on (m:Movie) assert m.id is unique;",
+      "text": "%neo4j_polyglot\ncreate constraint on (m:Movie) assert m.id is unique;",
       "user": "anonymous",
-      "dateUpdated": "2020-04-15 15:46:47.911",
+      "dateUpdated": "2020-09-28 20:01:56.447",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -108,16 +142,16 @@
       "jobName": "paragraph_1560347251388_2103760984",
       "id": "20190612-134731_1466506458",
       "dateCreated": "2019-06-12 13:47:31.388",
-      "dateStarted": "2020-04-15 15:46:48.699",
-      "dateFinished": "2020-04-15 15:46:48.792",
+      "dateStarted": "2020-09-28 20:01:56.534",
+      "dateFinished": "2020-09-28 20:01:56.620",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "Check if the DB is empty",
-      "text": "%neo4j\nMATCH (n) RETURN count(n)",
+      "text": "%neo4j_polyglot\nMATCH (n) RETURN count(n)",
       "user": "anonymous",
-      "dateUpdated": "2020-04-15 15:30:26.088",
+      "dateUpdated": "2020-09-28 20:02:04.060",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -164,29 +198,21 @@
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TABLE",
-            "data": "count(n)\n0\n"
-          }
-        ]
-      },
       "apps": [],
       "jobName": "paragraph_1560347287566_-2134847236",
       "id": "20190612-134807_665390123",
       "dateCreated": "2019-06-12 13:48:07.566",
-      "dateStarted": "2020-04-15 15:30:26.182",
-      "dateFinished": "2020-04-15 15:30:28.909",
+      "dateStarted": "2020-09-28 20:02:04.142",
+      "dateFinished": "2020-09-28 20:02:04.234",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "title": "Eventually clean it",
-      "text": "%neo4j\nMATCH (n) DETACH DELETE n",
+      "text": "%neo4j_polyglot\nMATCH (n) DETACH DELETE n",
       "user": "anonymous",
-      "dateUpdated": "2019-06-12 13:49:22.979",
+      "dateUpdated": "2020-09-28 19:13:29.463",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -255,9 +281,9 @@
     },
     {
       "title": "Check the created Graph",
-      "text": "%neo4j\nMATCH (n)-[r]-(m) RETURN *",
+      "text": "%neo4j_polyglot\nmatch (n)-[m]-(r) return *",
       "user": "anonymous",
-      "dateUpdated": "2020-04-15 15:31:45.600",
+      "dateUpdated": "2020-09-28 20:02:26.789",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -306,29 +332,28 @@
           "completionSupport": true
         },
         "editorMode": "ace/mode/undefined",
-        "title": true
+        "title": true,
+        "editorHide": false,
+        "tableHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": []
-      },
       "apps": [],
       "jobName": "paragraph_1560347803091_1155253881",
       "id": "20190612-135643_1614220712",
       "dateCreated": "2019-06-12 13:56:43.091",
-      "dateStarted": "2020-04-15 15:31:45.672",
-      "dateFinished": "2020-04-15 15:31:45.874",
+      "dateStarted": "2020-09-28 20:02:26.909",
+      "dateFinished": "2020-09-28 20:02:27.376",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\nGot to [Kibana](http://localhost:5601/app/kibana#/discover) and check the created indexes",
       "user": "anonymous",
-      "dateUpdated": "2019-06-12 14:34:32.920",
+      "dateUpdated": "2020-09-29 07:22:31.854",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -361,8 +386,8 @@
       "jobName": "paragraph_1560349953988_-1990678717",
       "id": "20190612-143233_698953487",
       "dateCreated": "2019-06-12 14:32:33.989",
-      "dateStarted": "2019-06-12 14:34:21.244",
-      "dateFinished": "2019-06-12 14:34:21.281",
+      "dateStarted": "2020-09-29 07:22:31.854",
+      "dateFinished": "2020-09-29 07:22:32.381",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -408,10 +433,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "title": "Execute the Page Rank on Neo4j and stream back the results into Elastic",
-      "text": "%neo4j\nCALL algo.pageRank.stream(\n\u0027MATCH (p:Person) RETURN p.id AS id\u0027,\n\u0027MATCH (p1:Person)--\u003e()\u003c--(p2:Person) RETURN distinct p1.id AS source, p2.id AS target\u0027,\n{graph:\u0027cypher\u0027}) YIELD nodeId, score\nMATCH (p:Person{id: nodeId})\nCALL streams.publish(\u0027rank\u0027, {id: toString(p.id), entity: \u0027person\u0027, properties: {rank: score, name: p.name, born: p.born}})\nRETURN nodeId, score\nORDER BY score DESC",
+      "text": "%neo4j_polyglot\nCALL gds.graph.create.cypher(\n    \u0027simple-page-rank-catalog\u0027,\n    \u0027MATCH (p:Person) RETURN id(p) AS id\u0027,\n    \u0027MATCH (p1:Person)--\u003e()\u003c--(p2:Person) RETURN distinct id(p1) AS source, id(p2) AS target\u0027)",
       "user": "anonymous",
-      "dateUpdated": "2020-04-15 15:49:09.799",
+      "dateUpdated": "2020-09-28 20:02:57.562",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -427,8 +451,12 @@
                   "tableGridState": {},
                   "tableColumnTypeState": {
                     "names": {
-                      "nodeId": "string",
-                      "score": "string"
+                      "nodeQuery": "string",
+                      "relationshipQuery": "string",
+                      "graphName": "string",
+                      "nodeCount": "string",
+                      "relationshipCount": "string",
+                      "createMillis": "string"
                     },
                     "updated": false
                   },
@@ -452,8 +480,124 @@
           "completionKey": "TAB",
           "completionSupport": true
         },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1601318379507_1422785030",
+      "id": "20200928-183939_2093723327",
+      "dateCreated": "2020-09-28 18:39:39.507",
+      "dateStarted": "2020-09-28 20:02:57.649",
+      "dateFinished": "2020-09-28 20:03:00.979",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Execute the Page Rank on Neo4j and stream back the results into Elastic",
+      "text": "%neo4j_polyglot\nCALL gds.pageRank.stream(\u0027simple-page-rank-catalog\u0027) YIELD nodeId, score\nWITH gds.util.asNode(nodeId) AS p, score\nCALL streams.publish(\u0027rank\u0027, {id: toString(p.id), entity: \u0027person\u0027, properties: {rank: score, name: p.name, born: p.born}})\nRETURN p.name, score\nORDER BY score DESC",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-28 20:03:07.207",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "p.name": "string",
+                      "score": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "p.name",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "score",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
         "editorMode": "ace/mode/undefined",
         "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1560348825094_377046241",
+      "id": "20190612-141345_1124196811",
+      "dateCreated": "2019-06-12 14:13:45.095",
+      "dateStarted": "2020-09-28 20:03:07.287",
+      "dateFinished": "2020-09-28 20:03:08.352",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nGot to [Kibana](http://localhost:5601/app/kibana#/discover) and check the new `rank` field inside the `person` index",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-29 07:23:09.363",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -463,46 +607,34 @@
         "code": "SUCCESS",
         "msg": [
           {
-            "type": "TABLE",
-            "data": "nodeId\tscore\n71\t4.603357304260134\n169\t3.0852148666046557\n1\t2.6146767326630656\n22\t2.443100033234805\n16\t2.3159051771275703\n5\t2.278571650013327\n6\t2.278571650013327\n34\t2.2577552175149322\n27\t2.047470647469163\n17\t2.005969590274617\n25\t1.8249856651760639\n19\t1.8175017292611302\n7\t1.6696382930967957\n4\t1.601311808219179\n42\t1.547633379790932\n20\t1.5098688497208055\n72\t1.507753553893417\n146\t1.450700714159757\n40\t1.4490965566132217\n115\t1.3841511421836912\n120\t1.329196504736319\n89\t1.3027881822548806\n133\t1.2612587310839445\n24\t1.2458408525679259\n170\t1.2244152343831955\n60\t1.2147828620858492\n65\t1.195893698045984\n77\t1.1686853435356168\n134\t1.1452447132673116\n53\t1.1034916401375083\n51\t1.0920134678017346\n28\t1.0852426514960827\n70\t1.0537592540495098\n64\t1.041611770982854\n127\t1.0286213973537086\n54\t1.0209236599737779\n18\t1.0139275612775236\n26\t1.0139275581110267\n21\t1.0139275549445301\n23\t1.0139275549445301\n58\t0.9943328443681821\n59\t0.9903474203078075\n45\t0.9547707332763821\n94\t0.9183904982171952\n43\t0.8804396190214901\n44\t0.8804396190214901\n38\t0.8804396158549933\n39\t0.8804396158549933\n41\t0.8804396031890063\n148\t0.837169972853735\n140\t0.8260585077572616\n106\t0.820007586572319\n107\t0.820007586572319\n108\t0.820007586572319\n109\t0.820007586572319\n110\t0.820007586572319\n96\t0.8054125356953593\n135\t0.8031837399583309\n136\t0.8031837399583309\n131\t0.8031837312504648\n132\t0.8031837312504648\n122\t0.8008262625429778\n123\t0.8008262625429778\n124\t0.8008262625429778\n125\t0.8008262625429778\n126\t0.8008262625429778\n80\t0.7839067576453089\n90\t0.7754452093970032\n91\t0.7754452093970032\n168\t0.7754452093970032\n88\t0.7754452030640097\n12\t0.766083642630838\n35\t0.7641114645404743\n36\t0.7641114645404743\n30\t0.7641114621656017\n31\t0.7641114621656017\n32\t0.7641114621656017\n33\t0.7641114621656017\n117\t0.7174571891780943\n118\t0.7174571891780943\n119\t0.7174571891780943\n163\t0.7046464869286866\n164\t0.7046464869286866\n165\t0.7046464869286866\n166\t0.7046464869286866\n47\t0.7033252408262343\n48\t0.7033252408262343\n49\t0.7033252408262343\n50\t0.7033252408262343\n142\t0.6886333487811498\n8\t0.6868254594272003\n2\t0.6868254578439518\n3\t0.6868254578439518\n74\t0.6781083487672731\n75\t0.6781083487672731\n76\t0.6781083487672731\n68\t0.6664354800246657\n69\t0.6664354800246657\n101\t0.6635180543642492\n102\t0.6635180543642492\n103\t0.6635180543642492\n104\t0.6635180543642492\n112\t0.6592869485495613\n113\t0.6592869485495613\n114\t0.6592869485495613\n129\t0.6472106760367752\n61\t0.6028737417538651\n57\t0.6028737415559589\n82\t0.5891665233299136\n83\t0.5891665233299136\n84\t0.5891665233299136\n138\t0.5877526908414439\n139\t0.5877526908414439\n156\t0.5679570527863689\n99\t0.5563217151444405\n145\t0.554112016549334\n149\t0.529070159920957\n13\t0.5180906920228153\n14\t0.5180906920228153\n66\t0.5169391545117832\n63\t0.51693914916832\n93\t0.5130316670401954\n55\t0.48134693996980793\n155\t0.4429610029212198\n98\t0.43389546026010084\n160\t0.42778059444390254\n143\t0.42238612009678034\n79\t0.40695305288536476\n86\t0.35906577604473566\n153\t0.34725054853479376\n158\t0.3431593836692629\n151\t0.32263256064616147\n167\t0.15000000000000002\n"
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eGot to \u003ca href\u003d\"http://localhost:5601/app/kibana#/discover\"\u003eKibana\u003c/a\u003e and check the new \u003ccode\u003erank\u003c/code\u003e field inside the \u003ccode\u003eperson\u003c/code\u003e index\u003c/p\u003e\n\u003c/div\u003e"
           }
         ]
-      },
-      "apps": [],
-      "jobName": "paragraph_1560348825094_377046241",
-      "id": "20190612-141345_1124196811",
-      "dateCreated": "2019-06-12 14:13:45.095",
-      "dateStarted": "2020-04-15 15:49:10.226",
-      "dateFinished": "2020-04-15 15:49:11.207",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%neo4j\n",
-      "user": "anonymous",
-      "dateUpdated": "2020-04-15 15:49:19.985",
-      "config": {
-        "colWidth": 12.0,
-        "fontSize": 9.0,
-        "enabled": true,
-        "results": {},
-        "editorSetting": {
-          "language": "scala",
-          "editOnDblClick": false,
-          "completionKey": "TAB",
-          "completionSupport": true
-        },
-        "editorMode": "ace/mode/undefined"
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
       },
       "apps": [],
       "jobName": "paragraph_1560348885141_1317838542",
       "id": "20190612-141445_527253697",
       "dateCreated": "2019-06-12 14:14:45.141",
+      "dateStarted": "2020-09-29 07:23:09.364",
+      "dateFinished": "2020-09-29 07:23:09.378",
       "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-29 07:23:09.274",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1601364189268_1464768690",
+      "id": "20200929-072309_487383814",
+      "dateCreated": "2020-09-29 07:23:09.268",
+      "status": "READY",
       "progressUpdateIntervalMs": 500
     }
   ],
@@ -513,6 +645,7 @@
   "angularObjects": {
     "md:shared_process": [],
     "neo4j:shared_process": [],
+    "neo4j_polyglot:shared_process": [],
     "spark:shared_process": []
   },
   "config": {

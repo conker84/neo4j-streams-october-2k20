@@ -24,6 +24,7 @@
     "transforms.rename.type": "org.apache.kafka.connect.transforms.ReplaceField$Value",
     "transforms.rename.renames": "properties.tagline:tagline,properties.title:title,properties.released:released,properties.name:name,properties.born:born,properties.rank:rank",
     "transforms.extractTopic.skip.missing.or.null": true,
+    "write.method": "upsert",
     "schema.ignore": "true"
   }
 }

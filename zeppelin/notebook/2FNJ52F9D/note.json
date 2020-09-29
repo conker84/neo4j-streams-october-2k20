@@ -42,9 +42,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\nInto the Docker Compose file you\u0027ll find the following configurations:\n\n```\nNEO4K_streams_sink_errors_tolerance: \"all\"\nNEO4K_streams_sink_errors_log_enable: \"true\"\nNEO4K_streams_sink_errors_deadletterqueue_topic_name: \"dlqtopic\"\nNEO4K_streams_sink_errors_deadletterqueue_context_headers_enable: \"true\"\nNEO4K_streams_sink_errors_deadletterqueue_context_headers_prefix: \"__streams.errors.\"\n```",
+      "text": "%md\n\nInto the Docker Compose file you\u0027ll find the following configurations:\n\n```\nNEO4J_streams_sink_errors_tolerance: \"all\"\nNEO4J_streams_sink_errors_log_enable: \"true\"\nNEO4J_streams_sink_errors_deadletterqueue_topic_name: \"dlqtopic\"\nNEO4J_streams_sink_errors_deadletterqueue_context_headers_enable: \"true\"\nNEO4J_streams_sink_errors_deadletterqueue_context_headers_prefix: \"__streams.errors.\"\n```",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 17:18:14.720",
+      "dateUpdated": "2020-09-28 20:51:31.621",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -69,7 +69,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eInto the Docker Compose file you\u0026rsquo;ll find the following configurations:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eNEO4K_streams_sink_errors_tolerance: \u0026quot;all\u0026quot;\nNEO4K_streams_sink_errors_log_enable: \u0026quot;true\u0026quot;\nNEO4K_streams_sink_errors_deadletterqueue_topic_name: \u0026quot;dlqtopic\u0026quot;\nNEO4K_streams_sink_errors_deadletterqueue_context_headers_enable: \u0026quot;true\u0026quot;\nNEO4K_streams_sink_errors_deadletterqueue_context_headers_prefix: \u0026quot;__streams.errors.\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eInto the Docker Compose file you\u0026rsquo;ll find the following configurations:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eNEO4J_streams_sink_errors_tolerance: \u0026quot;all\u0026quot;\nNEO4J_streams_sink_errors_log_enable: \u0026quot;true\u0026quot;\nNEO4J_streams_sink_errors_deadletterqueue_topic_name: \u0026quot;dlqtopic\u0026quot;\nNEO4J_streams_sink_errors_deadletterqueue_context_headers_enable: \u0026quot;true\u0026quot;\nNEO4J_streams_sink_errors_deadletterqueue_context_headers_prefix: \u0026quot;__streams.errors.\u0026quot;\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -77,8 +77,8 @@
       "jobName": "paragraph_1601054074019_-1499889287",
       "id": "20200925-171434_2071491925",
       "dateCreated": "2020-09-25 17:14:34.019",
-      "dateStarted": "2020-09-25 17:18:14.721",
-      "dateFinished": "2020-09-25 17:18:14.731",
+      "dateStarted": "2020-09-28 20:51:31.628",
+      "dateFinished": "2020-09-28 20:51:33.637",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -124,9 +124,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n# Let\u0027s look at the DLQ\n\n```\ndocker exec -it broker kafka-console-consumer --topic dlqtopic \\\n  --bootstrap-server broker:9092\n```",
+      "text": "%md\n# Let\u0027s look at the DLQ\n\n```\ndocker exec -it broker kafka-console-consumer --topic dlqtopic \\\n  --bootstrap-server broker:9092 --from-beginning\n```",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 17:21:19.196",
+      "dateUpdated": "2020-09-28 20:52:25.862",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -151,7 +151,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eLet\u0026rsquo;s look at the DLQ\u003c/h1\u003e\n\u003cpre\u003e\u003ccode\u003edocker exec -it broker kafka-console-consumer --topic dlqtopic \\\n  --bootstrap-server broker:9092\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eLet\u0026rsquo;s look at the DLQ\u003c/h1\u003e\n\u003cpre\u003e\u003ccode\u003edocker exec -it broker kafka-console-consumer --topic dlqtopic \\\n  --bootstrap-server broker:9092 --from-beginning\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -159,8 +159,8 @@
       "jobName": "paragraph_1601054373385_701746786",
       "id": "20200925-171933_1549228279",
       "dateCreated": "2020-09-25 17:19:33.385",
-      "dateStarted": "2020-09-25 17:21:19.201",
-      "dateFinished": "2020-09-25 17:21:19.217",
+      "dateStarted": "2020-09-28 20:52:25.863",
+      "dateFinished": "2020-09-28 20:52:25.886",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -199,11 +199,7 @@
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
-    "neo4j_basket:shared_process": [],
-    "neo4j:shared_process": [],
-    "neo4j_cud:shared_process": [],
-    "spark:shared_process": [],
-    "neo4j_jsonprojection:shared_process": []
+    "spark:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

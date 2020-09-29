@@ -1313,6 +1313,65 @@
         "isUserImpersonate": false
       }
     },
+    "neo4j_polyglot": {
+      "id": "neo4j_polyglot",
+      "name": "neo4j_polyglot",
+      "group": "neo4j",
+      "properties": {
+        "neo4j.auth.user": {
+          "name": "neo4j.auth.user",
+          "value": "neo4j",
+          "type": "string"
+        },
+        "neo4j.auth.password": {
+          "name": "neo4j.auth.password",
+          "value": "streams",
+          "type": "string"
+        },
+        "neo4j.auth.type": {
+          "name": "neo4j.auth.type",
+          "value": "BASIC",
+          "type": "string"
+        },
+        "neo4j.max.concurrency": {
+          "name": "neo4j.max.concurrency",
+          "value": "50",
+          "type": "number"
+        },
+        "neo4j.url": {
+          "name": "neo4j.url",
+          "value": "bolt://neo4j:7687",
+          "type": "url"
+        },
+        "neo4j.database": {
+          "name": "neo4j.database",
+          "value": "polyglot",
+          "type": "string"
+        }
+      },
+      "status": "READY",
+      "interpreterGroup": [
+        {
+          "name": "neo4j",
+          "class": "org.apache.zeppelin.graph.neo4j.Neo4jCypherInterpreter",
+          "defaultInterpreter": false,
+          "editor": {
+            "editOnDblClick": false
+          }
+        }
+      ],
+      "dependencies": [],
+      "option": {
+        "remote": true,
+        "port": -1,
+        "perNote": "shared",
+        "perUser": "shared",
+        "isExistingProcess": false,
+        "setPermission": false,
+        "owners": [],
+        "isUserImpersonate": false
+      }
+    },
     "flink": {
       "id": "flink",
       "name": "flink",
@@ -2024,7 +2083,8 @@
       "pig",
       "groovy",
       "neo4j",
-      "sap"
+      "sap",
+      "neo4j_polyglot"
     ],
     "2E1QP8SJH": [
       "spark",
