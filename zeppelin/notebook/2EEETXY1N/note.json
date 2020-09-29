@@ -638,7 +638,7 @@
       "progressUpdateIntervalMs": 500
     }
   ],
-  "name": "Master Apache Kafka/Neo4j, Kafka \u0026 Elastic Integration",
+  "name": "Master Apache Kafka/Sink/Neo4j, Kafka \u0026 Elastic Integration",
   "id": "2EEETXY1N",
   "noteParams": {},
   "noteForms": {},
