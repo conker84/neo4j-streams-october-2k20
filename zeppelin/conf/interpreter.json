@@ -445,7 +445,7 @@
           "type": "number"
         }
       },
-      "status": "DOWNLOADING_DEPENDENCIES",
+      "status": "READY",
       "interpreterGroup": [
         {
           "name": "hdfs",
@@ -508,7 +508,7 @@
           "type": "password"
         }
       },
-      "status": "DOWNLOADING_DEPENDENCIES",
+      "status": "READY",
       "interpreterGroup": [
         {
           "name": "elasticsearch",
