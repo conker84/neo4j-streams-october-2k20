@@ -201,7 +201,7 @@
     {
       "text": "%neo4j_cud\nmatch (n) return count(n)",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 15:05:41.593",
+      "dateUpdated": "2020-09-30 14:38:22.841",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -241,7 +241,8 @@
           "completionKey": "TAB",
           "completionSupport": true
         },
-        "editorMode": "ace/mode/undefined"
+        "editorMode": "ace/mode/undefined",
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -309,7 +310,7 @@
     {
       "text": "%neo4j_cud\nmatch (n) return n",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 15:06:24.487",
+      "dateUpdated": "2020-09-30 14:38:25.867",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -356,7 +357,7 @@
         },
         "editorMode": "ace/mode/undefined",
         "editorHide": false,
-        "tableHide": false
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -424,7 +425,7 @@
     {
       "text": "%neo4j_cud\nmatch (n) return n",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 15:12:59.720",
+      "dateUpdated": "2020-09-30 14:38:28.846",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -470,7 +471,8 @@
           "completionKey": "TAB",
           "completionSupport": true
         },
-        "editorMode": "ace/mode/undefined"
+        "editorMode": "ace/mode/undefined",
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -538,7 +540,7 @@
     {
       "text": "%neo4j_cud\nmatch (n)-[m]-(r) return *",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 15:17:44.918",
+      "dateUpdated": "2020-09-30 14:38:30.818",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -586,7 +588,8 @@
           "completionKey": "TAB",
           "completionSupport": true
         },
-        "editorMode": "ace/mode/undefined"
+        "editorMode": "ace/mode/undefined",
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -638,8 +641,7 @@
     "neo4j_basket:shared_process": [],
     "neo4j:shared_process": [],
     "neo4j_cud:shared_process": [],
-    "spark:shared_process": [],
-    "neo4j_jsonprojection:shared_process": []
+    "spark:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

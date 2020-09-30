@@ -323,9 +323,9 @@
       "title": "Consume your data from topic",
       "text": "%neo4j\ncall streams.consume(\u0027persons-topic\u0027, {timeout: 5000}) YIELD event\nunwind event.data as elem\nreturn elem",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 13:31:44.867",
+      "dateUpdated": "2020-09-30 14:37:31.472",
       "config": {
-        "tableHide": false,
+        "tableHide": true,
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
@@ -394,7 +394,7 @@
       "title": "Show the Sink Status",
       "text": "%neo4j\ncall streams.sink.status()",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 13:33:57.613",
+      "dateUpdated": "2020-09-30 14:37:33.167",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -436,7 +436,8 @@
           }
         },
         "enabled": true,
-        "title": true
+        "title": true,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -464,7 +465,7 @@
       "title": "Stop the Sink",
       "text": "%neo4j\ncall streams.sink.stop()",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 13:33:31.331",
+      "dateUpdated": "2020-09-30 14:37:34.942",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -506,7 +507,8 @@
           "completionSupport": true
         },
         "editorMode": "ace/mode/undefined",
-        "title": true
+        "title": true,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -534,7 +536,7 @@
       "title": "Show the Streams configuration",
       "text": "%neo4j\ncall streams.sink.config()",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 13:33:36.042",
+      "dateUpdated": "2020-09-30 14:37:37.761",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -584,7 +586,8 @@
           "completionSupport": true
         },
         "editorMode": "ace/mode/undefined",
-        "title": true
+        "title": true,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -612,7 +615,7 @@
       "title": "Start the Sink again",
       "text": "%neo4j\ncall streams.sink.start()",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 13:34:05.172",
+      "dateUpdated": "2020-09-30 14:37:39.517",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -654,7 +657,8 @@
           "completionSupport": true
         },
         "editorMode": "ace/mode/undefined",
-        "title": true
+        "title": true,
+        "tableHide": true
       },
       "settings": {
         "params": {},

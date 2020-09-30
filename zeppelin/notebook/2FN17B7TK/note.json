@@ -119,7 +119,7 @@
     {
       "text": "%neo4j_jsonprojection\nmatch (n) return count(n)",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 14:12:26.307",
+      "dateUpdated": "2020-09-30 14:39:05.432",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -159,7 +159,8 @@
           "completionKey": "TAB",
           "completionSupport": true
         },
-        "editorMode": "ace/mode/undefined"
+        "editorMode": "ace/mode/undefined",
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -268,7 +269,7 @@
     {
       "text": "%neo4j_jsonprojection\nmatch (n) return n",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 14:13:09.781",
+      "dateUpdated": "2020-09-30 14:39:08.114",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -316,7 +317,8 @@
           "completionKey": "TAB",
           "completionSupport": true
         },
-        "editorMode": "ace/mode/undefined"
+        "editorMode": "ace/mode/undefined",
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -384,7 +386,7 @@
     {
       "text": "%neo4j_jsonprojection\nmatch (n)-[r]-\u003e(m) return *",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 14:14:02.742",
+      "dateUpdated": "2020-09-30 14:39:11.029",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -433,7 +435,8 @@
           "completionKey": "TAB",
           "completionSupport": false
         },
-        "editorMode": "ace/mode/undefined"
+        "editorMode": "ace/mode/undefined",
+        "tableHide": true
       },
       "settings": {
         "params": {},
