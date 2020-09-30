@@ -124,9 +124,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n# Let\u0027s look at the DLQ with Kafkacat\n\n[Kafkacat](https://docs.confluent.io/current/app-development/kafkacat-usage.html) is a command line utility that you can use to test and debug Apache Kafka deployments. You can use kafkacat to produce, consume, and list topic and partition information for Kafka.\nDescribed as “netcat for Kafka”, it is a swiss-army knife of tools for inspecting and creating data in Kafka.\n\n```\ndocker run --tty \\\n  --network master_apache_kafka_with_neo4j_streams_default \\\n  confluentinc/cp-kafkacat \\\n  kafkacat -b broker:9093 -t dlqtopic -C \\\n  -f \u0027\\nKey (%K bytes): %k\n  Value (%S bytes): %s\n  Timestamp: %T\n  Partition: %p\n  Offset: %o\n  Headers: %h\\n\u0027\n```\n\n**N.b** please consider the the network name `master_apache_kafka_with_neo4j_streams_default` is related to the directory name of the compose file so if your compose file is inside a directory called `kafa_neo4j` the network change as `kafa_neo4j_default` and the full command become:\n\n```\ndocker run --tty \\\n  --network kafa_neo4j_default \\\n  confluentinc/cp-kafkacat \\\n  kafkacat -b broker:9093 -t dlqtopic -C \\\n  -f \u0027\\nKey (%K bytes): %k\n  Value (%S bytes): %s\n  Timestamp: %T\n  Partition: %p\n  Offset: %o\n  Headers: %h\\n\u0027\n```",
+      "text": "%md\n# Let\u0027s look at the DLQ with Kafkacat\n\n[Kafkacat](https://docs.confluent.io/current/app-development/kafkacat-usage.html) is a command line utility that you can use to test and debug Apache Kafka deployments. You can use kafkacat to produce, consume, and list topic and partition information for Kafka.\nDescribed as “netcat for Kafka”, it is a swiss-army knife of tools for inspecting and creating data in Kafka.\n\n```\ndocker run --tty \\\n  --network neo4j-streams-october-2k20 \\\n  confluentinc/cp-kafkacat \\\n  kafkacat -b broker:9093 -t dlqtopic -C \\\n  -f \u0027\\nKey (%K bytes): %k\n  Value (%S bytes): %s\n  Timestamp: %T\n  Partition: %p\n  Offset: %o\n  Headers: %h\\n\u0027\n```\n\n**N.b** please consider the the network name `neo4j-streams-october-2k20` is related to the directory name of the compose file so if your compose file is inside a directory called `kafa_neo4j` the network change as `kafa_neo4j_default` and the full command become:\n\n```\ndocker run --tty \\\n  --network kafa_neo4j_default \\\n  confluentinc/cp-kafkacat \\\n  kafkacat -b broker:9093 -t dlqtopic -C \\\n  -f \u0027\\nKey (%K bytes): %k\n  Value (%S bytes): %s\n  Timestamp: %T\n  Partition: %p\n  Offset: %o\n  Headers: %h\\n\u0027\n```",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 08:14:17.518",
+      "dateUpdated": "2020-09-30 11:59:32.168",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -151,7 +151,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eLet\u0026rsquo;s look at the DLQ with Kafkacat\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"https://docs.confluent.io/current/app-development/kafkacat-usage.html\"\u003eKafkacat\u003c/a\u003e is a command line utility that you can use to test and debug Apache Kafka deployments. You can use kafkacat to produce, consume, and list topic and partition information for Kafka.\u003cbr/\u003eDescribed as “netcat for Kafka”, it is a swiss-army knife of tools for inspecting and creating data in Kafka.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003edocker run --tty \\\n  --network master_apache_kafka_with_neo4j_streams_default \\\n  confluentinc/cp-kafkacat \\\n  kafkacat -b broker:9093 -t dlqtopic -C \\\n  -f \u0026#39;\\nKey (%K bytes): %k\n  Value (%S bytes): %s\n  Timestamp: %T\n  Partition: %p\n  Offset: %o\n  Headers: %h\\n\u0026#39;\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cstrong\u003eN.b\u003c/strong\u003e please consider the the network name \u003ccode\u003emaster_apache_kafka_with_neo4j_streams_default\u003c/code\u003e is related to the directory name of the compose file so if your compose file is inside a directory called \u003ccode\u003ekafa_neo4j\u003c/code\u003e the network change as \u003ccode\u003ekafa_neo4j_default\u003c/code\u003e and the full command become:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003edocker run --tty \\\n  --network kafa_neo4j_default \\\n  confluentinc/cp-kafkacat \\\n  kafkacat -b broker:9093 -t dlqtopic -C \\\n  -f \u0026#39;\\nKey (%K bytes): %k\n  Value (%S bytes): %s\n  Timestamp: %T\n  Partition: %p\n  Offset: %o\n  Headers: %h\\n\u0026#39;\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eLet\u0026rsquo;s look at the DLQ with Kafkacat\u003c/h1\u003e\n\u003cp\u003e\u003ca href\u003d\"https://docs.confluent.io/current/app-development/kafkacat-usage.html\"\u003eKafkacat\u003c/a\u003e is a command line utility that you can use to test and debug Apache Kafka deployments. You can use kafkacat to produce, consume, and list topic and partition information for Kafka.\u003cbr/\u003eDescribed as “netcat for Kafka”, it is a swiss-army knife of tools for inspecting and creating data in Kafka.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003edocker run --tty \\\n  --network neo4j-streams-october-2k20 \\\n  confluentinc/cp-kafkacat \\\n  kafkacat -b broker:9093 -t dlqtopic -C \\\n  -f \u0026#39;\\nKey (%K bytes): %k\n  Value (%S bytes): %s\n  Timestamp: %T\n  Partition: %p\n  Offset: %o\n  Headers: %h\\n\u0026#39;\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cstrong\u003eN.b\u003c/strong\u003e please consider the the network name \u003ccode\u003eneo4j-streams-october-2k20\u003c/code\u003e is related to the directory name of the compose file so if your compose file is inside a directory called \u003ccode\u003ekafa_neo4j\u003c/code\u003e the network change as \u003ccode\u003ekafa_neo4j_default\u003c/code\u003e and the full command become:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003edocker run --tty \\\n  --network kafa_neo4j_default \\\n  confluentinc/cp-kafkacat \\\n  kafkacat -b broker:9093 -t dlqtopic -C \\\n  -f \u0026#39;\\nKey (%K bytes): %k\n  Value (%S bytes): %s\n  Timestamp: %T\n  Partition: %p\n  Offset: %o\n  Headers: %h\\n\u0026#39;\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -159,8 +159,8 @@
       "jobName": "paragraph_1601054373385_701746786",
       "id": "20200925-171933_1549228279",
       "dateCreated": "2020-09-25 17:19:33.385",
-      "dateStarted": "2020-09-30 08:14:17.518",
-      "dateFinished": "2020-09-30 08:14:17.563",
+      "dateStarted": "2020-09-30 11:59:32.171",
+      "dateFinished": "2020-09-30 11:59:34.141",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -206,18 +206,59 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "text": "%md\nAs you can see we have the original message as topic record: `{id: 1, \"name\": \"Andrea\", \"surname\": \"Santurbano\"}`\nand following headers:\n\n```\n__streams.errors.topic\u003dknows\n```\n\n\n```\n__streams.errors.partition\u003d0\n```\n\n```\n__streams.errors.offset\u003d0\n```\n\n```\n__streams.errors.class.name\u003dstreams.kafka.KafkaAutoCommitEventConsumer\n```\n\n```\n__streams.errors.exception.class.name\u003dcom.fasterxml.jackson.core.JsonParseException\n```\n\n```\n__streams.errors.exception.message\u003dUnexpected character (\u0027i\u0027 (code 105)): was expecting double-quote to start field name\n at [Source: (String)\"{id: 1, \"name\": \"Andrea\", \"surname\": \"Santurbano\"}\"; line: 1, column: 3]\n```\n\n```\nstreams.errors.exception.stacktrace\u003dcom.fasterxml.jackson.core.JsonParseException: Unexpected character (\u0027i\u0027 (code 105)): was expecting double-quote to start field name\n at [Source: (String)\"{id: 1, \"name\": \"Andrea\", \"surname\": \"Santurbano\"}\"; line: 1, column: 3]\n        at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1851)\n        at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:707)\n        at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:632)\n        at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddName(ReaderBasedJsonParser.java:1806)\n        at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:708)\n        at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer$Vanilla.deserialize(UntypedObjectDeserializer.java:646)\n        at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4482)\n        at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3434)\n        at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3417)\n        at streams.extensions.CommonExtensionsKt.convertData(CommonExtensions.kt:123)\n        at streams.extensions.CommonExtensionsKt.convertData$default(CommonExtensions.kt:69)\n        at streams.extensions.CommonExtensionsKt.toStreamsSinkEntity(CommonExtensions.kt:79)\n        at streams.kafka.KafkaAutoCommitEventConsumer.convert(KafkaAutoCommitEventConsumer.kt:114)\n        at streams.kafka.KafkaAutoCommitEventConsumer.executeAction(KafkaAutoCommitEventConsumer.kt:105)\n        at streams.kafka.KafkaAutoCommitEventConsumer.readSimple(KafkaAutoCommitEventConsumer.kt:97)\n        at streams.kafka.KafkaAutoCommitEventConsumer.read(KafkaAutoCommitEventConsumer.kt:144)\n        at streams.kafka.KafkaEventSink$createJob$1.invokeSuspend(KafkaEventSink.kt:156)\n        at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n        at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:56)\n        at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:571)\n        at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:738)\n        at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:678)\n        at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:665)\n```",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-30 12:12:16.006",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eAs you can see we have the original message as topic record: \u003ccode\u003e{id: 1, \u0026quot;name\u0026quot;: \u0026quot;Andrea\u0026quot;, \u0026quot;surname\u0026quot;: \u0026quot;Santurbano\u0026quot;}\u003c/code\u003e\u003cbr/\u003eand following headers:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e__streams.errors.topic\u003dknows\n\u003c/code\u003e\u003c/pre\u003e\n\u003cpre\u003e\u003ccode\u003e__streams.errors.partition\u003d0\n\u003c/code\u003e\u003c/pre\u003e\n\u003cpre\u003e\u003ccode\u003e__streams.errors.offset\u003d0\n\u003c/code\u003e\u003c/pre\u003e\n\u003cpre\u003e\u003ccode\u003e__streams.errors.class.name\u003dstreams.kafka.KafkaAutoCommitEventConsumer\n\u003c/code\u003e\u003c/pre\u003e\n\u003cpre\u003e\u003ccode\u003e__streams.errors.exception.class.name\u003dcom.fasterxml.jackson.core.JsonParseException\n\u003c/code\u003e\u003c/pre\u003e\n\u003cpre\u003e\u003ccode\u003e__streams.errors.exception.message\u003dUnexpected character (\u0026#39;i\u0026#39; (code 105)): was expecting double-quote to start field name\n at [Source: (String)\u0026quot;{id: 1, \u0026quot;name\u0026quot;: \u0026quot;Andrea\u0026quot;, \u0026quot;surname\u0026quot;: \u0026quot;Santurbano\u0026quot;}\u0026quot;; line: 1, column: 3]\n\u003c/code\u003e\u003c/pre\u003e\n\u003cpre\u003e\u003ccode\u003estreams.errors.exception.stacktrace\u003dcom.fasterxml.jackson.core.JsonParseException: Unexpected character (\u0026#39;i\u0026#39; (code 105)): was expecting double-quote to start field name\n at [Source: (String)\u0026quot;{id: 1, \u0026quot;name\u0026quot;: \u0026quot;Andrea\u0026quot;, \u0026quot;surname\u0026quot;: \u0026quot;Santurbano\u0026quot;}\u0026quot;; line: 1, column: 3]\n        at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1851)\n        at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:707)\n        at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:632)\n        at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddName(ReaderBasedJsonParser.java:1806)\n        at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:708)\n        at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer$Vanilla.deserialize(UntypedObjectDeserializer.java:646)\n        at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4482)\n        at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3434)\n        at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3417)\n        at streams.extensions.CommonExtensionsKt.convertData(CommonExtensions.kt:123)\n        at streams.extensions.CommonExtensionsKt.convertData$default(CommonExtensions.kt:69)\n        at streams.extensions.CommonExtensionsKt.toStreamsSinkEntity(CommonExtensions.kt:79)\n        at streams.kafka.KafkaAutoCommitEventConsumer.convert(KafkaAutoCommitEventConsumer.kt:114)\n        at streams.kafka.KafkaAutoCommitEventConsumer.executeAction(KafkaAutoCommitEventConsumer.kt:105)\n        at streams.kafka.KafkaAutoCommitEventConsumer.readSimple(KafkaAutoCommitEventConsumer.kt:97)\n        at streams.kafka.KafkaAutoCommitEventConsumer.read(KafkaAutoCommitEventConsumer.kt:144)\n        at streams.kafka.KafkaEventSink$createJob$1.invokeSuspend(KafkaEventSink.kt:156)\n        at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)\n        at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:56)\n        at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:571)\n        at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:738)\n        at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:678)\n        at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:665)\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601453735438_1754084991",
+      "id": "20200930-081535_1165478266",
+      "dateCreated": "2020-09-30 08:15:35.438",
+      "dateStarted": "2020-09-30 12:12:16.006",
+      "dateFinished": "2020-09-30 12:12:16.033",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
       "text": "%md\n",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 08:15:35.441",
+      "dateUpdated": "2020-09-30 12:07:19.309",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1601453735438_1754084991",
-      "id": "20200930-081535_1165478266",
-      "dateCreated": "2020-09-30 08:15:35.438",
+      "jobName": "paragraph_1601467639305_1681429079",
+      "id": "20200930-120719_632607327",
+      "dateCreated": "2020-09-30 12:07:19.305",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
@@ -228,6 +269,7 @@
   "noteForms": {},
   "angularObjects": {
     "md:shared_process": [],
+    "neo4j:shared_process": [],
     "spark:shared_process": []
   },
   "config": {
