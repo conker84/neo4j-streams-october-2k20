@@ -44,7 +44,7 @@
     {
       "text": "%md\n\n## Node Example\n\nThe following JSON:\n\n```\n{\n  \"op\": \"merge\",\n  \"properties\": {\n    \"foo\": \"value\",\n    \"key\": 1\n  },\n  \"ids\": {\"key\": 1, \"otherKey\":  \"foo\"},\n  \"labels\": [\"Foo\",\"Bar\"],\n  \"type\": \"node\"\n}\n```\n\n\ngets transformed into the following Cypher query:\n\n```\nMERGE (n:Foo:Bar {key: event.ids.key, otherkey: event.ids.otherkey})\nSET n +\u003d event.properties\n```\n",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 16:28:16.075",
+      "dateUpdated": "2020-09-29 15:04:24.305",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -77,15 +77,15 @@
       "jobName": "paragraph_1601050955156_-562352416",
       "id": "20200925-162235_2056972886",
       "dateCreated": "2020-09-25 16:22:35.156",
-      "dateStarted": "2020-09-25 16:28:16.075",
-      "dateFinished": "2020-09-25 16:28:16.086",
+      "dateStarted": "2020-09-29 15:04:24.305",
+      "dateFinished": "2020-09-29 15:04:24.315",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n## Relationship Example\n\nThe following JSON:\n\n```\n{\n  \"op\": \"create\",\n  \"properties\": {\n    \"foo\": \"rel-value\",\n    \"key\": 1\n  },\n  \"rel_type\": \"MY_REL\",\n  \"from\": {\n    \"ids\": {\"key\": 1},\n    \"labels\": [\"Foo\",\"Bar\"]\n  },\n  \"to\": {\n    \"ids\": {\"otherKey\":1},\n    \"labels\": [\"FooBar\"]\n  },\n  \"type\":\"relationship\"\n}\n\n```\n\n\ngets transformed into the following Cypher query:\n\n```\nMATCH (from:Foo:Bar {key: event.from.ids.key})\nMATCH (to:FooBar {otherKey: event.to.ids.otherKey})\nCREATE (from)-[r:MY_REL]-\u003e(to)\nSET r \u003d event.properties\n```\n",
+      "text": "%md\n\n## Relationship Example\n\nThe following JSON:\n\n```\n{\n  \"op\": \"create\",\n  \"properties\": {\n    \"foo\": \"rel-value\",\n    \"bar\": 1\n  },\n  \"rel_type\": \"MY_REL\",\n  \"from\": {\n    \"ids\": {\"key\": 1},\n    \"labels\": [\"Foo\",\"Bar\"]\n  },\n  \"to\": {\n    \"ids\": {\"otherKey\":1},\n    \"labels\": [\"FooBar\"]\n  },\n  \"type\":\"relationship\"\n}\n\n```\n\n\ngets transformed into the following Cypher query:\n\n```\nMATCH (from:Foo:Bar {key: event.from.ids.key})\nMATCH (to:FooBar {otherKey: event.to.ids.otherKey})\nCREATE (from)-[r:MY_REL]-\u003e(to)\nSET r \u003d event.properties\n```\n",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 16:28:09.224",
+      "dateUpdated": "2020-09-29 15:04:11.745",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -110,7 +110,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eRelationship Example\u003c/h2\u003e\n\u003cp\u003eThe following JSON:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e{\n  \u0026quot;op\u0026quot;: \u0026quot;create\u0026quot;,\n  \u0026quot;properties\u0026quot;: {\n    \u0026quot;foo\u0026quot;: \u0026quot;rel-value\u0026quot;,\n    \u0026quot;key\u0026quot;: 1\n  },\n  \u0026quot;rel_type\u0026quot;: \u0026quot;MY_REL\u0026quot;,\n  \u0026quot;from\u0026quot;: {\n    \u0026quot;ids\u0026quot;: {\u0026quot;key\u0026quot;: 1},\n    \u0026quot;labels\u0026quot;: [\u0026quot;Foo\u0026quot;,\u0026quot;Bar\u0026quot;]\n  },\n  \u0026quot;to\u0026quot;: {\n    \u0026quot;ids\u0026quot;: {\u0026quot;otherKey\u0026quot;:1},\n    \u0026quot;labels\u0026quot;: [\u0026quot;FooBar\u0026quot;]\n  },\n  \u0026quot;type\u0026quot;:\u0026quot;relationship\u0026quot;\n}\n\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003egets transformed into the following Cypher query:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eMATCH (from:Foo:Bar {key: event.from.ids.key})\nMATCH (to:FooBar {otherKey: event.to.ids.otherKey})\nCREATE (from)-[r:MY_REL]-\u0026gt;(to)\nSET r \u003d event.properties\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eRelationship Example\u003c/h2\u003e\n\u003cp\u003eThe following JSON:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e{\n  \u0026quot;op\u0026quot;: \u0026quot;create\u0026quot;,\n  \u0026quot;properties\u0026quot;: {\n    \u0026quot;foo\u0026quot;: \u0026quot;rel-value\u0026quot;,\n    \u0026quot;bar\u0026quot;: 1\n  },\n  \u0026quot;rel_type\u0026quot;: \u0026quot;MY_REL\u0026quot;,\n  \u0026quot;from\u0026quot;: {\n    \u0026quot;ids\u0026quot;: {\u0026quot;key\u0026quot;: 1},\n    \u0026quot;labels\u0026quot;: [\u0026quot;Foo\u0026quot;,\u0026quot;Bar\u0026quot;]\n  },\n  \u0026quot;to\u0026quot;: {\n    \u0026quot;ids\u0026quot;: {\u0026quot;otherKey\u0026quot;:1},\n    \u0026quot;labels\u0026quot;: [\u0026quot;FooBar\u0026quot;]\n  },\n  \u0026quot;type\u0026quot;:\u0026quot;relationship\u0026quot;\n}\n\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003egets transformed into the following Cypher query:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eMATCH (from:Foo:Bar {key: event.from.ids.key})\nMATCH (to:FooBar {otherKey: event.to.ids.otherKey})\nCREATE (from)-[r:MY_REL]-\u0026gt;(to)\nSET r \u003d event.properties\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
           }
         ]
       },
@@ -118,15 +118,56 @@
       "jobName": "paragraph_1601051018243_1297068783",
       "id": "20200925-162338_1335458804",
       "dateCreated": "2020-09-25 16:23:38.243",
-      "dateStarted": "2020-09-25 16:28:09.225",
-      "dateFinished": "2020-09-25 16:28:09.244",
+      "dateStarted": "2020-09-29 15:04:11.745",
+      "dateFinished": "2020-09-29 15:04:11.769",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nIn the Docker Compose file you\u0027ll find the following environment variable:\n\n```\nNEO4J_streams_sink_topic_cud_to_cud: cudtopic\n```",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-29 15:05:19.048",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eIn the Docker Compose file you\u0026rsquo;ll find the following environment variable:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eNEO4J_streams_sink_topic_cud_to_cud: cudtopic\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601391876912_-401207384",
+      "id": "20200929-150436_528913399",
+      "dateCreated": "2020-09-29 15:04:36.912",
+      "dateStarted": "2020-09-29 15:05:19.048",
+      "dateFinished": "2020-09-29 15:05:19.066",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j\nCREATE DATABASE cud",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 16:34:17.898",
+      "dateUpdated": "2020-09-29 15:04:19.240",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -152,15 +193,15 @@
       "jobName": "paragraph_1601051289174_-2121592749",
       "id": "20200925-162809_354288917",
       "dateCreated": "2020-09-25 16:28:09.174",
-      "dateStarted": "2020-09-25 16:34:17.931",
-      "dateFinished": "2020-09-25 16:34:43.455",
+      "dateStarted": "2020-09-29 15:04:19.277",
+      "dateFinished": "2020-09-29 15:04:19.598",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_cud\nmatch (n) return count(n)",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 16:50:47.051",
+      "dateUpdated": "2020-09-29 15:05:41.593",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -219,15 +260,15 @@
       "jobName": "paragraph_1601052027924_1128281777",
       "id": "20200925-164027_4023376",
       "dateCreated": "2020-09-25 16:40:27.924",
-      "dateStarted": "2020-09-25 16:50:41.855",
-      "dateFinished": "2020-09-25 16:50:46.484",
+      "dateStarted": "2020-09-29 15:05:41.629",
+      "dateFinished": "2020-09-29 15:05:44.729",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n# Create a Producer\n\n```\ndocker exec -it broker kafka-console-producer --topic cudtopic \\\n  --broker-list broker:9092\n```\n\n## Send the data\n\n```\n{\"op\":\"merge\",\"properties\":{\"name\":\"Andrea\",\"surname\":\"Santurbano\"},\"ids\":{\"ssn\":\"A1B34\"},\"labels\":[\"Person\",\"Customer\"],\"type\":\"node\"}\n```",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 16:51:07.550",
+      "dateUpdated": "2020-09-29 15:12:24.787",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -260,15 +301,15 @@
       "jobName": "paragraph_1601051657898_2083084718",
       "id": "20200925-163417_152083522",
       "dateCreated": "2020-09-25 16:34:17.898",
-      "dateStarted": "2020-09-25 16:51:07.550",
-      "dateFinished": "2020-09-25 16:51:09.820",
+      "dateStarted": "2020-09-29 15:12:24.787",
+      "dateFinished": "2020-09-29 15:12:24.796",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_cud\nmatch (n) return n",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 16:51:45.165",
+      "dateUpdated": "2020-09-29 15:06:24.487",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -326,7 +367,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"surname\":\"Santurbano\",\"ssn\":\"A1B34\"},\"label\":\"Person\"}],\"edges\":[],\"labels\":{\"Person\":\"#D96778\",\"Customer\":\"#77B704\"},\"types\":[],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"surname\":\"Santurbano\",\"ssn\":\"A1B34\"},\"label\":\"Person\"}],\"edges\":[],\"labels\":{\"Person\":\"#C960A8\",\"Customer\":\"#E0EA60\"},\"types\":[],\"directed\":true}"
           }
         ]
       },
@@ -334,24 +375,254 @@
       "jobName": "paragraph_1601052045418_1045104855",
       "id": "20200925-164045_1833614231",
       "dateCreated": "2020-09-25 16:40:45.418",
-      "dateStarted": "2020-09-25 16:51:39.660",
-      "dateFinished": "2020-09-25 16:51:40.033",
+      "dateStarted": "2020-09-29 15:06:24.526",
+      "dateFinished": "2020-09-29 15:06:24.648",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n",
+      "text": "%md\n## Send the data\n\n```\n{\"op\":\"merge\",\"properties\":{\"name\":\"My Awesome Product\"},\"ids\":{\"sku\":\"10A3\"},\"labels\":[\"Product\"],\"type\":\"node\"}\n```",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 16:51:31.929",
+      "dateUpdated": "2020-09-29 15:12:44.170",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eSend the data\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003e{\u0026quot;op\u0026quot;:\u0026quot;merge\u0026quot;,\u0026quot;properties\u0026quot;:{\u0026quot;name\u0026quot;:\u0026quot;My Awesome Product\u0026quot;},\u0026quot;ids\u0026quot;:{\u0026quot;sku\u0026quot;:\u0026quot;10A3\u0026quot;},\u0026quot;labels\u0026quot;:[\u0026quot;Product\u0026quot;],\u0026quot;type\u0026quot;:\u0026quot;node\u0026quot;}\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601052691925_-688208781",
+      "id": "20200925-165131_1843451291",
+      "dateCreated": "2020-09-25 16:51:31.925",
+      "dateStarted": "2020-09-29 15:12:44.171",
+      "dateFinished": "2020-09-29 15:12:44.177",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_cud\nmatch (n) return n",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-29 15:12:59.720",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "network",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "label": "string",
+                      "name": "string",
+                      "surname": "string",
+                      "ssn": "string",
+                      "sku": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "NETWORK",
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"surname\":\"Santurbano\",\"ssn\":\"A1B34\"},\"label\":\"Person\"},{\"id\":1,\"data\":{\"name\":\"My Awesome Product\",\"sku\":\"10A3\"},\"label\":\"Product\"}],\"edges\":[],\"labels\":{\"Person\":\"#C960A8\",\"Customer\":\"#E0EA60\",\"Product\":\"#144CFD\"},\"types\":[],\"directed\":true}"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601392047189_-1381300776",
+      "id": "20200929-150727_1309278606",
+      "dateCreated": "2020-09-29 15:07:27.189",
+      "dateStarted": "2020-09-29 15:12:57.627",
+      "dateFinished": "2020-09-29 15:12:57.670",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Send the data\n\n```\n{\"op\":\"create\",\"properties\":{\"quantity\":10, \"currency\": \"€\"},\"to\":{\"ids\":{\"sku\":\"10A3\"},\"labels\":[\"Product\"]},\"from\":{\"ids\":{\"ssn\":\"A1B34\"},\"labels\":[\"Person\",\"Customer\"]},\"type\":\"relationship\",\"rel_type\":\"BOUGHT\"}\n```",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-29 15:17:27.874",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eSend the data\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003e{\u0026quot;op\u0026quot;:\u0026quot;create\u0026quot;,\u0026quot;properties\u0026quot;:{\u0026quot;quantity\u0026quot;:10, \u0026quot;currency\u0026quot;: \u0026quot;€\u0026quot;},\u0026quot;to\u0026quot;:{\u0026quot;ids\u0026quot;:{\u0026quot;sku\u0026quot;:\u0026quot;10A3\u0026quot;},\u0026quot;labels\u0026quot;:[\u0026quot;Product\u0026quot;]},\u0026quot;from\u0026quot;:{\u0026quot;ids\u0026quot;:{\u0026quot;ssn\u0026quot;:\u0026quot;A1B34\u0026quot;},\u0026quot;labels\u0026quot;:[\u0026quot;Person\u0026quot;,\u0026quot;Customer\u0026quot;]},\u0026quot;type\u0026quot;:\u0026quot;relationship\u0026quot;,\u0026quot;rel_type\u0026quot;:\u0026quot;BOUGHT\u0026quot;}\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601392067725_725962389",
+      "id": "20200929-150747_409977597",
+      "dateCreated": "2020-09-29 15:07:47.725",
+      "dateStarted": "2020-09-29 15:17:27.875",
+      "dateFinished": "2020-09-29 15:17:27.905",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_cud\nmatch (n)-[m]-(r) return *",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-29 15:17:44.918",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "network",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "label": "string",
+                      "name": "string",
+                      "surname": "string",
+                      "ssn": "string",
+                      "sku": "string",
+                      "currency": "string",
+                      "quantity": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "NETWORK",
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"surname\":\"Santurbano\",\"ssn\":\"A1B34\"},\"label\":\"Person\"},{\"id\":1,\"data\":{\"name\":\"My Awesome Product\",\"sku\":\"10A3\"},\"label\":\"Product\"}],\"edges\":[{\"source\":0,\"target\":1,\"id\":0,\"data\":{\"currency\":\"€\",\"quantity\":10},\"label\":\"BOUGHT\"}],\"labels\":{\"Person\":\"#C960A8\",\"Customer\":\"#E0EA60\",\"Product\":\"#144CFD\"},\"types\":[\"BOUGHT\"],\"directed\":true}"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601392320199_-2071003299",
+      "id": "20200929-151200_489677595",
+      "dateCreated": "2020-09-29 15:12:00.199",
+      "dateStarted": "2020-09-29 15:17:43.150",
+      "dateFinished": "2020-09-29 15:17:43.246",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_cud\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-29 15:12:17.338",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1601052691925_-688208781",
-      "id": "20200925-165131_1843451291",
-      "dateCreated": "2020-09-25 16:51:31.925",
+      "jobName": "paragraph_1601392337335_-767149287",
+      "id": "20200929-151217_656050118",
+      "dateCreated": "2020-09-29 15:12:17.335",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
@@ -361,10 +632,14 @@
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
+    "neo4j_cdcschematarget:shared_process": [],
     "md:shared_process": [],
+    "neo4j_cdcschemasource:shared_process": [],
+    "neo4j_basket:shared_process": [],
     "neo4j:shared_process": [],
     "neo4j_cud:shared_process": [],
-    "spark:shared_process": []
+    "spark:shared_process": [],
+    "neo4j_jsonprojection:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

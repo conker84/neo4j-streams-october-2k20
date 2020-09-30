@@ -85,7 +85,7 @@
       "title": "Publish your first event",
       "text": "%neo4j\nCALL streams.publish(\u0027my-topic\u0027, \u0027Hello World from Neo4j!\u0027)",
       "user": "anonymous",
-      "dateUpdated": "2020-09-28 12:07:01.399",
+      "dateUpdated": "2020-09-29 13:28:55.946",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -113,8 +113,8 @@
       "jobName": "paragraph_1547890429927_-1202575310",
       "id": "20181212-222435_1247313594",
       "dateCreated": "2019-01-19 09:33:49.927",
-      "dateStarted": "2020-09-28 12:07:01.436",
-      "dateFinished": "2020-09-28 12:07:01.532",
+      "dateStarted": "2020-09-29 13:28:56.181",
+      "dateFinished": "2020-09-29 13:29:00.020",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -163,7 +163,7 @@
       "title": "Publish a JSON",
       "text": "%neo4j\nCALL streams.publish(\u0027my-topic\u0027, [{name: \"Andrea\", surname: \"Santurbano\"}, {name: \"Michael\", surname: \"Hunger\"}])",
       "user": "anonymous",
-      "dateUpdated": "2020-09-28 12:08:05.506",
+      "dateUpdated": "2020-09-29 13:29:47.064",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -191,8 +191,8 @@
       "jobName": "paragraph_1547890429928_-1423164887",
       "id": "20181213-174451_1136633655",
       "dateCreated": "2019-01-19 09:33:49.928",
-      "dateStarted": "2020-09-28 12:08:05.550",
-      "dateFinished": "2020-09-28 12:08:05.604",
+      "dateStarted": "2020-09-29 13:29:47.153",
+      "dateFinished": "2020-09-29 13:29:47.244",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -323,7 +323,7 @@
       "title": "Consume your data from topic",
       "text": "%neo4j\ncall streams.consume(\u0027persons-topic\u0027, {timeout: 5000}) YIELD event\nunwind event.data as elem\nreturn elem",
       "user": "anonymous",
-      "dateUpdated": "2020-09-28 12:14:41.225",
+      "dateUpdated": "2020-09-29 13:31:44.867",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -385,8 +385,8 @@
       "jobName": "paragraph_1547890429930_38054867",
       "id": "20181212-222500_1686009915",
       "dateCreated": "2019-01-19 09:33:49.930",
-      "dateStarted": "2020-09-28 12:14:41.258",
-      "dateFinished": "2020-09-28 12:14:46.347",
+      "dateStarted": "2020-09-29 13:31:44.940",
+      "dateFinished": "2020-09-29 13:31:50.413",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -394,7 +394,7 @@
       "title": "Show the Sink Status",
       "text": "%neo4j\ncall streams.sink.status()",
       "user": "anonymous",
-      "dateUpdated": "2020-09-28 12:15:27.957",
+      "dateUpdated": "2020-09-29 13:33:57.613",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -447,7 +447,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "name\tvalue\n\"status\"\t\"RUNNING\"\n"
+            "data": "name\tvalue\n\"status\"\t\"STOPPED\"\n"
           }
         ]
       },
@@ -455,8 +455,8 @@
       "jobName": "paragraph_1547890429931_67771610",
       "id": "20181212-222533_201247004",
       "dateCreated": "2019-01-19 09:33:49.931",
-      "dateStarted": "2020-09-28 12:15:27.987",
-      "dateFinished": "2020-09-28 12:15:28.004",
+      "dateStarted": "2020-09-29 13:33:57.657",
+      "dateFinished": "2020-09-29 13:33:57.688",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -464,7 +464,7 @@
       "title": "Stop the Sink",
       "text": "%neo4j\ncall streams.sink.stop()",
       "user": "anonymous",
-      "dateUpdated": "2020-09-28 12:15:03.979",
+      "dateUpdated": "2020-09-29 13:33:31.331",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -525,8 +525,8 @@
       "jobName": "paragraph_1600950561822_131585193",
       "id": "20200924-122921_958441777",
       "dateCreated": "2020-09-24 12:29:21.822",
-      "dateStarted": "2020-09-28 12:15:04.024",
-      "dateFinished": "2020-09-28 12:15:04.089",
+      "dateStarted": "2020-09-29 13:33:31.384",
+      "dateFinished": "2020-09-29 13:33:31.473",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -534,7 +534,7 @@
       "title": "Show the Streams configuration",
       "text": "%neo4j\ncall streams.sink.config()",
       "user": "anonymous",
-      "dateUpdated": "2020-09-28 12:15:10.429",
+      "dateUpdated": "2020-09-29 13:33:36.042",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -551,6 +551,11 @@
                   "tableColumnTypeState": {
                     "names": {
                       "name": "string",
+                      "value.errors.tolerance": "string",
+                      "value.errors.deadletterqueue.context.headers.prefix": "string",
+                      "value.errors.log.enable": "string",
+                      "value.errors.deadletterqueue.context.headers.enable": "string",
+                      "value.errors.deadletterqueue.topic.name": "string",
                       "value": "string",
                       "value.labelName": "string",
                       "value.idName": "string",
@@ -590,7 +595,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "name\tvalue\tvalue.labelName\tvalue.idName\tvalue.knows\n\"streams.sink.errors\"\t\t\t\t\n\"streams.cluster.only\"\tFALSE\t\t\t\n\"streams.sink.source.id.strategy.config\"\t\tSourceEvent\tsourceId\t\n\"streams.sink.topic.cypher\"\t\t\t\tMERGE (source:Person{id: event.source.id}) SET source +\u003d event.source.properties MERGE (target:Person{id: event.target.id}) SET target +\u003d event.target.properties MERGE (source)-[know:KNOWS]-\u003e(target) SET know +\u003d event.properties\n\"streams.sink.topic.cud\"\t[]\t\t\t\n\"streams.sink.topic.cdc.schema\"\t[]\t\t\t\n\"streams.sink.topic.cdc.sourceId\"\t[]\t\t\t\n\"streams.sink.topic.pattern.node\"\t\t\t\t\n\"streams.sink.topic.pattern.relationship\"\t\t\t\t\n\"invalid_topics\"\t[]\t\t\t\n"
+            "data": "name\tvalue.errors.tolerance\tvalue.errors.deadletterqueue.context.headers.prefix\tvalue.errors.log.enable\tvalue.errors.deadletterqueue.context.headers.enable\tvalue.errors.deadletterqueue.topic.name\tvalue\tvalue.labelName\tvalue.idName\tvalue.knows\n\"streams.sink.errors\"\tall\t__streams.errors.\ttrue\ttrue\tdlqtopic\t\t\t\t\n\"streams.cluster.only\"\t\t\t\t\t\tFALSE\t\t\t\n\"streams.sink.source.id.strategy.config\"\t\t\t\t\t\t\tSourceEvent\tsourceId\t\n\"streams.sink.topic.cypher\"\t\t\t\t\t\t\t\t\tMERGE (source:Person{id: event.source.id}) SET source +\u003d event.source.properties MERGE (target:Person{id: event.target.id}) SET target +\u003d event.target.properties MERGE (source)-[know:KNOWS]-\u003e(target) SET know +\u003d event.properties\n\"streams.sink.topic.cud\"\t\t\t\t\t\t[]\t\t\t\n\"streams.sink.topic.cdc.schema\"\t\t\t\t\t\t[]\t\t\t\n\"streams.sink.topic.cdc.sourceId\"\t\t\t\t\t\t[]\t\t\t\n\"streams.sink.topic.pattern.node\"\t\t\t\t\t\t\t\t\t\n\"streams.sink.topic.pattern.relationship\"\t\t\t\t\t\t\t\t\t\n\"invalid_topics\"\t\t\t\t\t\t[]\t\t\t\n"
           }
         ]
       },
@@ -598,8 +603,8 @@
       "jobName": "paragraph_1601020082956_-1205339683",
       "id": "20200925-074802_1450060696",
       "dateCreated": "2020-09-25 07:48:02.956",
-      "dateStarted": "2020-09-28 12:15:10.182",
-      "dateFinished": "2020-09-28 12:15:10.283",
+      "dateStarted": "2020-09-29 13:33:35.714",
+      "dateFinished": "2020-09-29 13:33:35.852",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -607,7 +612,7 @@
       "title": "Start the Sink again",
       "text": "%neo4j\ncall streams.sink.start()",
       "user": "anonymous",
-      "dateUpdated": "2020-09-28 12:15:20.400",
+      "dateUpdated": "2020-09-29 13:34:05.172",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -668,8 +673,8 @@
       "jobName": "paragraph_1601020094577_266414397",
       "id": "20200925-074814_2026667138",
       "dateCreated": "2020-09-25 07:48:14.577",
-      "dateStarted": "2020-09-28 12:15:20.452",
-      "dateFinished": "2020-09-28 12:15:20.571",
+      "dateStarted": "2020-09-29 13:34:05.218",
+      "dateFinished": "2020-09-29 13:34:05.357",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

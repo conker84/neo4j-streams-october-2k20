@@ -44,7 +44,7 @@
     {
       "text": "%md\nIn the Docker Compose file you\u0027ll find the following properties:\n\n```\nNEO4J_streams_sink_topic_pattern_node_jsonprojuser_to_jsonprojection: User{!userId}\nNEO4J_streams_sink_topic_pattern_node_jsonprojproduct_to_jsonprojection: Product{!productId}\nNEO4J_streams_sink_topic_pattern_relationship_jsonprojbought_to_jsonprojection: (:User:Customer{!userId})-[:BOUGHT]-\u003e(:Product{!productId})\n```",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 16:04:45.807",
+      "dateUpdated": "2020-09-29 14:11:52.755",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -77,15 +77,15 @@
       "jobName": "paragraph_1601047332048_-1951800733",
       "id": "20200925-152212_260638432",
       "dateCreated": "2020-09-25 15:22:12.048",
-      "dateStarted": "2020-09-25 16:04:45.818",
-      "dateFinished": "2020-09-25 16:04:48.202",
+      "dateStarted": "2020-09-29 14:11:52.755",
+      "dateFinished": "2020-09-29 14:11:52.779",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j\nCREATE DATABASE jsonprojection",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 15:26:23.336",
+      "dateUpdated": "2020-09-29 14:12:23.632",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -111,15 +111,15 @@
       "jobName": "paragraph_1601047384287_-1757240141",
       "id": "20200925-152304_336698329",
       "dateCreated": "2020-09-25 15:23:04.287",
-      "dateStarted": "2020-09-25 15:26:23.389",
-      "dateFinished": "2020-09-25 15:27:06.272",
+      "dateStarted": "2020-09-29 14:12:23.673",
+      "dateFinished": "2020-09-29 14:12:23.955",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_jsonprojection\nmatch (n) return count(n)",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 16:04:52.265",
+      "dateUpdated": "2020-09-29 14:12:26.307",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -178,8 +178,8 @@
       "jobName": "paragraph_1601048487426_-825046085",
       "id": "20200925-154127_2048013883",
       "dateCreated": "2020-09-25 15:41:27.426",
-      "dateStarted": "2020-09-25 16:04:52.342",
-      "dateFinished": "2020-09-25 16:04:57.057",
+      "dateStarted": "2020-09-29 14:12:26.336",
+      "dateFinished": "2020-09-29 14:12:29.410",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -268,7 +268,7 @@
     {
       "text": "%neo4j_jsonprojection\nmatch (n) return n",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 16:13:15.457",
+      "dateUpdated": "2020-09-29 14:13:09.781",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -327,7 +327,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"address.city\":\"Venice\",\"userId\":1,\"surname\":\"Santurbano\",\"address.cap\":\"30100\"},\"label\":\"User\"},{\"id\":1,\"data\":{\"productId\":100,\"name\":\"My Awesome product!\"},\"label\":\"Product\"}],\"edges\":[],\"labels\":{\"User\":\"#756C1A\",\"Product\":\"#EAEF22\"},\"types\":[],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"address.city\":\"Venice\",\"userId\":1,\"surname\":\"Santurbano\",\"address.cap\":\"30100\"},\"label\":\"User\"},{\"id\":1,\"data\":{\"productId\":100,\"name\":\"My Awesome product!\"},\"label\":\"Product\"}],\"edges\":[],\"labels\":{\"User\":\"#9CD8E5\",\"Product\":\"#090DB0\"},\"types\":[],\"directed\":true}"
           }
         ]
       },
@@ -335,8 +335,8 @@
       "jobName": "paragraph_1601047583336_-985733945",
       "id": "20200925-152623_479719367",
       "dateCreated": "2020-09-25 15:26:23.336",
-      "dateStarted": "2020-09-25 16:13:09.122",
-      "dateFinished": "2020-09-25 16:13:13.742",
+      "dateStarted": "2020-09-29 14:13:09.814",
+      "dateFinished": "2020-09-29 14:13:09.939",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -384,7 +384,7 @@
     {
       "text": "%neo4j_jsonprojection\nmatch (n)-[r]-\u003e(m) return *",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 16:17:56.750",
+      "dateUpdated": "2020-09-29 14:14:02.742",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -444,7 +444,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":1,\"data\":{\"productId\":100},\"label\":\"Product\"},{\"id\":2,\"data\":{\"userId\":1},\"label\":\"User\"}],\"edges\":[{\"source\":2,\"target\":1,\"id\":0,\"data\":{\"currency\":\"€\",\"quantity\":2,\"shippingAddress.city\":\"Venice\",\"shippingAddress.cap\":\"30100\",\"price\":10},\"label\":\"BOUGHT\"}],\"labels\":{\"User\":\"#A3E092\",\"Product\":\"#BAE8E7\",\"Customer\":\"#D38574\"},\"types\":[\"BOUGHT\"],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":1,\"data\":{\"productId\":100},\"label\":\"Product\"},{\"id\":2,\"data\":{\"userId\":1},\"label\":\"User\"}],\"edges\":[{\"source\":2,\"target\":1,\"id\":0,\"data\":{\"currency\":\"€\",\"quantity\":2,\"shippingAddress.city\":\"Venice\",\"shippingAddress.cap\":\"30100\",\"price\":10},\"label\":\"BOUGHT\"}],\"labels\":{\"User\":\"#9CD8E5\",\"Product\":\"#090DB0\",\"Customer\":\"#AF8736\"},\"types\":[\"BOUGHT\"],\"directed\":true}"
           }
         ]
       },
@@ -452,8 +452,8 @@
       "jobName": "paragraph_1601048749835_-1686489928",
       "id": "20200925-154549_936547163",
       "dateCreated": "2020-09-25 15:45:49.835",
-      "dateStarted": "2020-09-25 16:17:49.964",
-      "dateFinished": "2020-09-25 16:17:54.327",
+      "dateStarted": "2020-09-29 14:14:02.772",
+      "dateFinished": "2020-09-29 14:14:02.828",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -479,7 +479,10 @@
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
+    "neo4j_cdcschematarget:shared_process": [],
     "md:shared_process": [],
+    "neo4j_cdcschemasource:shared_process": [],
+    "neo4j_basket:shared_process": [],
     "neo4j:shared_process": [],
     "spark:shared_process": [],
     "neo4j_jsonprojection:shared_process": []
