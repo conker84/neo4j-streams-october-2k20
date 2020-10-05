@@ -85,7 +85,7 @@
     {
       "text": "%neo4j\nCREATE DATABASE jsonprojection",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 14:12:23.632",
+      "dateUpdated": "2020-10-05 18:11:14.213",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -107,16 +107,16 @@
       "jobName": "paragraph_1601047384287_-1757240141",
       "id": "20200925-152304_336698329",
       "dateCreated": "2020-09-25 15:23:04.287",
-      "dateStarted": "2020-09-29 14:12:23.673",
-      "dateFinished": "2020-09-29 14:12:23.955",
-      "status": "FINISHED",
+      "dateStarted": "2020-10-05 18:11:14.246",
+      "dateFinished": "2020-10-05 18:11:14.322",
+      "status": "ERROR",
       "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_jsonprojection\nmatch (n) return count(n)",
       "user": "anonymous",
-      "dateUpdated": "2020-10-05 15:34:13.592",
+      "dateUpdated": "2020-10-05 18:11:19.307",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -163,14 +163,208 @@
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "count(n)\n0\n"
+          }
+        ]
+      },
       "apps": [],
       "jobName": "paragraph_1601048487426_-825046085",
       "id": "20200925-154127_2048013883",
       "dateCreated": "2020-09-25 15:41:27.426",
-      "dateStarted": "2020-09-29 14:12:26.336",
-      "dateFinished": "2020-09-29 14:12:29.410",
+      "dateStarted": "2020-10-05 18:11:19.343",
+      "dateFinished": "2020-10-05 18:11:19.404",
       "status": "FINISHED",
-      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_jsonprojection\nCREATE CONSTRAINT neo4j_streams_user_constraint ON (u:User) ASSERT (u.userId) IS UNIQUE",
+      "user": "anonymous",
+      "dateUpdated": "2020-10-05 17:54:49.589",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1601915028975_1780389072",
+      "id": "20201005-162348_2015915588",
+      "dateCreated": "2020-10-05 16:23:48.975",
+      "dateStarted": "2020-10-05 17:54:49.658",
+      "dateFinished": "2020-10-05 17:54:49.843",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_jsonprojection\nCREATE CONSTRAINT neo4j_streams_product_constraint ON (p:Product) ASSERT (p.productId) IS UNIQUE",
+      "user": "anonymous",
+      "dateUpdated": "2020-10-05 17:54:51.013",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/undefined"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1601915114160_391067423",
+      "id": "20201005-162514_447834503",
+      "dateCreated": "2020-10-05 16:25:14.160",
+      "dateStarted": "2020-10-05 17:54:51.075",
+      "dateFinished": "2020-10-05 17:54:51.159",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n# Create a Producer\n\n```\ndocker exec -it broker kafka-console-producer --topic jsonprojbought \\\n  --broker-list broker:9092\n```\n\n## Send the data\n\n```\n{\"userId\": 1, \"productId\": 100, \"price\": 10, \"currency\": \"€\", \"quantity\": 2, \"shippingAddress\": {\"city\": \"Venice\", \"cap\": \"30100\"}}\n```",
+      "user": "anonymous",
+      "dateUpdated": "2020-09-25 16:15:28.482",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCreate a Producer\u003c/h1\u003e\n\u003cpre\u003e\u003ccode\u003edocker exec -it broker kafka-console-producer --topic jsonprojbought \\\n  --broker-list broker:9092\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2\u003eSend the data\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003e{\u0026quot;userId\u0026quot;: 1, \u0026quot;productId\u0026quot;: 100, \u0026quot;price\u0026quot;: 10, \u0026quot;currency\u0026quot;: \u0026quot;€\u0026quot;, \u0026quot;quantity\u0026quot;: 2, \u0026quot;shippingAddress\u0026quot;: {\u0026quot;city\u0026quot;: \u0026quot;Venice\u0026quot;, \u0026quot;cap\u0026quot;: \u0026quot;30100\u0026quot;}}\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601048527402_-1339204322",
+      "id": "20200925-154207_1283111698",
+      "dateCreated": "2020-09-25 15:42:07.402",
+      "dateStarted": "2020-09-25 16:15:28.488",
+      "dateFinished": "2020-09-25 16:15:28.514",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%neo4j_jsonprojection\nmatch (n)-[r]-\u003e(m) return *",
+      "user": "anonymous",
+      "dateUpdated": "2020-10-05 18:11:39.423",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "network",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "label": "string",
+                      "productId": "string",
+                      "userId": "string",
+                      "currency": "string",
+                      "quantity": "string",
+                      "shippingAddress.city": "string",
+                      "shippingAddress.cap": "string",
+                      "price": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/undefined",
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "NETWORK",
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"userId\":1},\"label\":\"User\"},{\"id\":1,\"data\":{\"productId\":100},\"label\":\"Product\"}],\"edges\":[{\"source\":0,\"target\":1,\"id\":0,\"data\":{\"currency\":\"€\",\"quantity\":2,\"shippingAddress.city\":\"Venice\",\"shippingAddress.cap\":\"30100\",\"price\":10},\"label\":\"BOUGHT\"}],\"labels\":{\"User\":\"#958DDE\",\"Product\":\"#5302CE\",\"Customer\":\"#96C9F5\"},\"types\":[\"BOUGHT\"],\"directed\":true}"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1601048749835_-1686489928",
+      "id": "20200925-154549_936547163",
+      "dateCreated": "2020-09-25 15:45:49.835",
+      "dateStarted": "2020-10-05 18:11:39.454",
+      "dateFinished": "2020-10-05 18:11:39.535",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -256,9 +450,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%neo4j_jsonprojection\nmatch (n) return n",
+      "text": "%neo4j_jsonprojection\nmatch (n)-[r]-\u003e(m) return *",
       "user": "anonymous",
-      "dateUpdated": "2020-10-05 15:34:16.721",
+      "dateUpdated": "2020-10-05 18:12:17.562",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -313,147 +507,37 @@
         "params": {},
         "forms": {}
       },
-      "apps": [],
-      "jobName": "paragraph_1601047583336_-985733945",
-      "id": "20200925-152623_479719367",
-      "dateCreated": "2020-09-25 15:26:23.336",
-      "dateStarted": "2020-09-29 14:13:09.814",
-      "dateFinished": "2020-09-29 14:13:09.939",
-      "status": "FINISHED",
-      "errorMessage": "",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%md\n# Create a Producer\n\n```\ndocker exec -it broker kafka-console-producer --topic jsonprojbought \\\n  --broker-list broker:9092\n```\n\n## Send the data\n\n```\n{\"userId\": 1, \"productId\": 100, \"price\": 10, \"currency\": \"€\", \"quantity\": 2, \"shippingAddress\": {\"city\": \"Venice\", \"cap\": \"30100\"}}\n```",
-      "user": "anonymous",
-      "dateUpdated": "2020-09-25 16:15:28.482",
-      "config": {
-        "colWidth": 12.0,
-        "fontSize": 9.0,
-        "enabled": true,
-        "results": {},
-        "editorSetting": {
-          "language": "markdown",
-          "editOnDblClick": true,
-          "completionKey": "TAB",
-          "completionSupport": false
-        },
-        "editorMode": "ace/mode/markdown",
-        "editorHide": true,
-        "tableHide": false
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eCreate a Producer\u003c/h1\u003e\n\u003cpre\u003e\u003ccode\u003edocker exec -it broker kafka-console-producer --topic jsonprojbought \\\n  --broker-list broker:9092\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2\u003eSend the data\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003e{\u0026quot;userId\u0026quot;: 1, \u0026quot;productId\u0026quot;: 100, \u0026quot;price\u0026quot;: 10, \u0026quot;currency\u0026quot;: \u0026quot;€\u0026quot;, \u0026quot;quantity\u0026quot;: 2, \u0026quot;shippingAddress\u0026quot;: {\u0026quot;city\u0026quot;: \u0026quot;Venice\u0026quot;, \u0026quot;cap\u0026quot;: \u0026quot;30100\u0026quot;}}\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/div\u003e"
-          }
-        ]
-      },
-      "apps": [],
-      "jobName": "paragraph_1601048527402_-1339204322",
-      "id": "20200925-154207_1283111698",
-      "dateCreated": "2020-09-25 15:42:07.402",
-      "dateStarted": "2020-09-25 16:15:28.488",
-      "dateFinished": "2020-09-25 16:15:28.514",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%neo4j_jsonprojection\nmatch (n)-[r]-\u003e(m) return *",
-      "user": "anonymous",
-      "dateUpdated": "2020-10-05 15:34:19.967",
-      "config": {
-        "colWidth": 12.0,
-        "fontSize": 9.0,
-        "enabled": true,
-        "results": {
-          "0": {
-            "graph": {
-              "mode": "network",
-              "height": 300.0,
-              "optionOpen": false,
-              "setting": {
-                "table": {
-                  "tableGridState": {},
-                  "tableColumnTypeState": {
-                    "names": {
-                      "id": "string",
-                      "label": "string",
-                      "productId": "string",
-                      "userId": "string",
-                      "currency": "string",
-                      "quantity": "string",
-                      "shippingAddress.city": "string",
-                      "shippingAddress.cap": "string",
-                      "price": "string"
-                    },
-                    "updated": false
-                  },
-                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
-                  "tableOptionValue": {
-                    "useFilter": false,
-                    "showPagination": false,
-                    "showAggregationFooter": false
-                  },
-                  "updated": false,
-                  "initialized": false
-                }
-              },
-              "commonSetting": {}
-            },
-            "helium": {}
-          }
-        },
-        "editorSetting": {
-          "language": "markdown",
-          "editOnDblClick": false,
-          "completionKey": "TAB",
-          "completionSupport": false
-        },
-        "editorMode": "ace/mode/undefined",
-        "tableHide": false
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
       "results": {
         "code": "SUCCESS",
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":1,\"data\":{\"productId\":100},\"label\":\"Product\"},{\"id\":2,\"data\":{\"userId\":1},\"label\":\"User\"}],\"edges\":[{\"source\":2,\"target\":1,\"id\":0,\"data\":{\"currency\":\"€\",\"quantity\":2,\"shippingAddress.city\":\"Venice\",\"shippingAddress.cap\":\"30100\",\"price\":10},\"label\":\"BOUGHT\"}],\"labels\":{\"User\":\"#9CD8E5\",\"Product\":\"#090DB0\",\"Customer\":\"#AF8736\"},\"types\":[\"BOUGHT\"],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"address.city\":\"Venice\",\"userId\":1,\"surname\":\"Santurbano\",\"address.cap\":\"30100\"},\"label\":\"User\"},{\"id\":1,\"data\":{\"productId\":100,\"name\":\"My Awesome product!\"},\"label\":\"Product\"}],\"edges\":[{\"source\":0,\"target\":1,\"id\":0,\"data\":{\"currency\":\"€\",\"quantity\":2,\"shippingAddress.city\":\"Venice\",\"shippingAddress.cap\":\"30100\",\"price\":10},\"label\":\"BOUGHT\"}],\"labels\":{\"User\":\"#958DDE\",\"Product\":\"#5302CE\",\"Customer\":\"#96C9F5\"},\"types\":[\"BOUGHT\"],\"directed\":true}"
           }
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1601048749835_-1686489928",
-      "id": "20200925-154549_936547163",
-      "dateCreated": "2020-09-25 15:45:49.835",
-      "dateStarted": "2020-09-29 14:14:02.772",
-      "dateFinished": "2020-09-29 14:14:02.828",
+      "jobName": "paragraph_1601047583336_-985733945",
+      "id": "20200925-152623_479719367",
+      "dateCreated": "2020-09-25 15:26:23.336",
+      "dateStarted": "2020-10-05 18:12:17.597",
+      "dateFinished": "2020-10-05 18:12:17.647",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_jsonprojection\n",
       "user": "anonymous",
-      "dateUpdated": "2020-09-25 16:13:58.855",
+      "dateUpdated": "2020-10-05 16:32:23.927",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1601050438852_1424947523",
-      "id": "20200925-161358_1358399266",
-      "dateCreated": "2020-09-25 16:13:58.852",
+      "jobName": "paragraph_1601915543925_744017299",
+      "id": "20201005-163223_1633775013",
+      "dateCreated": "2020-10-05 16:32:23.925",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
@@ -463,10 +547,7 @@
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
-    "neo4j_cdcschematarget:shared_process": [],
     "md:shared_process": [],
-    "neo4j_cdcschemasource:shared_process": [],
-    "neo4j_basket:shared_process": [],
     "neo4j:shared_process": [],
     "spark:shared_process": [],
     "neo4j_jsonprojection:shared_process": []
