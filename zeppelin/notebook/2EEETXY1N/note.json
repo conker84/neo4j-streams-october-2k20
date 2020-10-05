@@ -212,7 +212,7 @@
       "title": "Eventually clean it",
       "text": "%neo4j_polyglot\nMATCH (n) DETACH DELETE n",
       "user": "anonymous",
-      "dateUpdated": "2020-09-28 19:13:29.463",
+      "dateUpdated": "2020-10-05 15:35:51.325",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -225,7 +225,8 @@
           "completionSupport": true
         },
         "editorMode": "ace/mode/undefined",
-        "title": true
+        "title": true,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -236,6 +237,7 @@
       "id": "20190612-134843_492539677",
       "dateCreated": "2019-06-12 13:48:43.603",
       "status": "READY",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {

@@ -85,7 +85,7 @@
       "title": "Publish your first event",
       "text": "%neo4j\nCALL streams.publish(\u0027my-topic\u0027, \u0027Hello World from Neo4j!\u0027)",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 13:28:55.946",
+      "dateUpdated": "2020-10-05 14:50:32.899",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -113,8 +113,8 @@
       "jobName": "paragraph_1547890429927_-1202575310",
       "id": "20181212-222435_1247313594",
       "dateCreated": "2019-01-19 09:33:49.927",
-      "dateStarted": "2020-09-29 13:28:56.181",
-      "dateFinished": "2020-09-29 13:29:00.020",
+      "dateStarted": "2020-10-05 14:50:32.962",
+      "dateFinished": "2020-10-05 14:50:33.085",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -163,7 +163,7 @@
       "title": "Publish a JSON",
       "text": "%neo4j\nCALL streams.publish(\u0027my-topic\u0027, [{name: \"Andrea\", surname: \"Santurbano\"}, {name: \"Michael\", surname: \"Hunger\"}])",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 13:29:47.064",
+      "dateUpdated": "2020-10-05 14:51:52.367",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -191,8 +191,8 @@
       "jobName": "paragraph_1547890429928_-1423164887",
       "id": "20181213-174451_1136633655",
       "dateCreated": "2019-01-19 09:33:49.928",
-      "dateStarted": "2020-09-29 13:29:47.153",
-      "dateFinished": "2020-09-29 13:29:47.244",
+      "dateStarted": "2020-10-05 14:51:52.416",
+      "dateFinished": "2020-10-05 14:51:52.479",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -323,9 +323,9 @@
       "title": "Consume your data from topic",
       "text": "%neo4j\ncall streams.consume(\u0027persons-topic\u0027, {timeout: 5000}) YIELD event\nunwind event.data as elem\nreturn elem",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 14:37:31.472",
+      "dateUpdated": "2020-10-05 14:54:08.706",
       "config": {
-        "tableHide": true,
+        "tableHide": false,
         "editorSetting": {
           "language": "scala",
           "editOnDblClick": false,
@@ -385,8 +385,8 @@
       "jobName": "paragraph_1547890429930_38054867",
       "id": "20181212-222500_1686009915",
       "dateCreated": "2019-01-19 09:33:49.930",
-      "dateStarted": "2020-09-29 13:31:44.940",
-      "dateFinished": "2020-09-29 13:31:50.413",
+      "dateStarted": "2020-10-05 14:54:08.742",
+      "dateFinished": "2020-10-05 14:54:13.855",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -394,7 +394,7 @@
       "title": "Show the Sink Status",
       "text": "%neo4j\ncall streams.sink.status()",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 14:37:33.167",
+      "dateUpdated": "2020-10-05 14:55:09.908",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -437,7 +437,7 @@
         },
         "enabled": true,
         "title": true,
-        "tableHide": true
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -448,7 +448,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "name\tvalue\n\"status\"\t\"STOPPED\"\n"
+            "data": "name\tvalue\n\"status\"\t\"RUNNING\"\n"
           }
         ]
       },
@@ -456,8 +456,8 @@
       "jobName": "paragraph_1547890429931_67771610",
       "id": "20181212-222533_201247004",
       "dateCreated": "2019-01-19 09:33:49.931",
-      "dateStarted": "2020-09-29 13:33:57.657",
-      "dateFinished": "2020-09-29 13:33:57.688",
+      "dateStarted": "2020-10-05 14:55:09.938",
+      "dateFinished": "2020-10-05 14:55:09.962",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -465,7 +465,7 @@
       "title": "Stop the Sink",
       "text": "%neo4j\ncall streams.sink.stop()",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 14:37:34.942",
+      "dateUpdated": "2020-10-05 14:55:16.822",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -508,7 +508,7 @@
         },
         "editorMode": "ace/mode/undefined",
         "title": true,
-        "tableHide": true
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -527,8 +527,8 @@
       "jobName": "paragraph_1600950561822_131585193",
       "id": "20200924-122921_958441777",
       "dateCreated": "2020-09-24 12:29:21.822",
-      "dateStarted": "2020-09-29 13:33:31.384",
-      "dateFinished": "2020-09-29 13:33:31.473",
+      "dateStarted": "2020-10-05 14:55:14.579",
+      "dateFinished": "2020-10-05 14:55:14.652",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -536,7 +536,7 @@
       "title": "Show the Streams configuration",
       "text": "%neo4j\ncall streams.sink.config()",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 14:37:37.761",
+      "dateUpdated": "2020-10-05 14:55:25.101",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -587,7 +587,7 @@
         },
         "editorMode": "ace/mode/undefined",
         "title": true,
-        "tableHide": true
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -606,8 +606,8 @@
       "jobName": "paragraph_1601020082956_-1205339683",
       "id": "20200925-074802_1450060696",
       "dateCreated": "2020-09-25 07:48:02.956",
-      "dateStarted": "2020-09-29 13:33:35.714",
-      "dateFinished": "2020-09-29 13:33:35.852",
+      "dateStarted": "2020-10-05 14:55:23.018",
+      "dateFinished": "2020-10-05 14:55:23.124",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -615,7 +615,7 @@
       "title": "Start the Sink again",
       "text": "%neo4j\ncall streams.sink.start()",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 14:37:39.517",
+      "dateUpdated": "2020-10-05 14:55:56.029",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -658,7 +658,7 @@
         },
         "editorMode": "ace/mode/undefined",
         "title": true,
-        "tableHide": true
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -677,8 +677,8 @@
       "jobName": "paragraph_1601020094577_266414397",
       "id": "20200925-074814_2026667138",
       "dateCreated": "2020-09-25 07:48:14.577",
-      "dateStarted": "2020-09-29 13:34:05.218",
-      "dateFinished": "2020-09-29 13:34:05.357",
+      "dateStarted": "2020-10-05 14:55:56.060",
+      "dateFinished": "2020-10-05 14:55:56.090",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

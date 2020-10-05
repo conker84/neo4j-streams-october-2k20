@@ -103,10 +103,6 @@
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": []
-      },
       "apps": [],
       "jobName": "paragraph_1601047384287_-1757240141",
       "id": "20200925-152304_336698329",
@@ -114,12 +110,13 @@
       "dateStarted": "2020-09-29 14:12:23.673",
       "dateFinished": "2020-09-29 14:12:23.955",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_jsonprojection\nmatch (n) return count(n)",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 14:39:05.432",
+      "dateUpdated": "2020-10-05 15:34:13.592",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -160,20 +157,11 @@
           "completionSupport": true
         },
         "editorMode": "ace/mode/undefined",
-        "tableHide": true
+        "tableHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TABLE",
-            "data": "count(n)\n0\n"
-          }
-        ]
       },
       "apps": [],
       "jobName": "paragraph_1601048487426_-825046085",
@@ -182,6 +170,7 @@
       "dateStarted": "2020-09-29 14:12:26.336",
       "dateFinished": "2020-09-29 14:12:29.410",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -269,7 +258,7 @@
     {
       "text": "%neo4j_jsonprojection\nmatch (n) return n",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 14:39:08.114",
+      "dateUpdated": "2020-10-05 15:34:16.721",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -318,20 +307,11 @@
           "completionSupport": true
         },
         "editorMode": "ace/mode/undefined",
-        "tableHide": true
+        "tableHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"address.city\":\"Venice\",\"userId\":1,\"surname\":\"Santurbano\",\"address.cap\":\"30100\"},\"label\":\"User\"},{\"id\":1,\"data\":{\"productId\":100,\"name\":\"My Awesome product!\"},\"label\":\"Product\"}],\"edges\":[],\"labels\":{\"User\":\"#9CD8E5\",\"Product\":\"#090DB0\"},\"types\":[],\"directed\":true}"
-          }
-        ]
       },
       "apps": [],
       "jobName": "paragraph_1601047583336_-985733945",
@@ -340,6 +320,7 @@
       "dateStarted": "2020-09-29 14:13:09.814",
       "dateFinished": "2020-09-29 14:13:09.939",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -386,7 +367,7 @@
     {
       "text": "%neo4j_jsonprojection\nmatch (n)-[r]-\u003e(m) return *",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 14:39:11.029",
+      "dateUpdated": "2020-10-05 15:34:19.967",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -436,7 +417,7 @@
           "completionSupport": false
         },
         "editorMode": "ace/mode/undefined",
-        "tableHide": true
+        "tableHide": false
       },
       "settings": {
         "params": {},

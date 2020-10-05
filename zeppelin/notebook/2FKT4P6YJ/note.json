@@ -201,7 +201,7 @@
     {
       "text": "%neo4j_cud\nmatch (n) return count(n)",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 14:38:22.841",
+      "dateUpdated": "2020-10-05 15:34:49.528",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -242,20 +242,11 @@
           "completionSupport": true
         },
         "editorMode": "ace/mode/undefined",
-        "tableHide": true
+        "tableHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TABLE",
-            "data": "count(n)\n0\n"
-          }
-        ]
       },
       "apps": [],
       "jobName": "paragraph_1601052027924_1128281777",
@@ -264,6 +255,7 @@
       "dateStarted": "2020-09-29 15:05:41.629",
       "dateFinished": "2020-09-29 15:05:44.729",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -310,7 +302,7 @@
     {
       "text": "%neo4j_cud\nmatch (n) return n",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 14:38:25.867",
+      "dateUpdated": "2020-10-05 15:34:52.708",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -357,20 +349,11 @@
         },
         "editorMode": "ace/mode/undefined",
         "editorHide": false,
-        "tableHide": true
+        "tableHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"surname\":\"Santurbano\",\"ssn\":\"A1B34\"},\"label\":\"Person\"}],\"edges\":[],\"labels\":{\"Person\":\"#C960A8\",\"Customer\":\"#E0EA60\"},\"types\":[],\"directed\":true}"
-          }
-        ]
       },
       "apps": [],
       "jobName": "paragraph_1601052045418_1045104855",
@@ -379,6 +362,7 @@
       "dateStarted": "2020-09-29 15:06:24.526",
       "dateFinished": "2020-09-29 15:06:24.648",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -425,7 +409,7 @@
     {
       "text": "%neo4j_cud\nmatch (n) return n",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 14:38:28.846",
+      "dateUpdated": "2020-10-05 15:34:56.218",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -472,20 +456,11 @@
           "completionSupport": true
         },
         "editorMode": "ace/mode/undefined",
-        "tableHide": true
+        "tableHide": false
       },
       "settings": {
         "params": {},
         "forms": {}
-      },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"surname\":\"Santurbano\",\"ssn\":\"A1B34\"},\"label\":\"Person\"},{\"id\":1,\"data\":{\"name\":\"My Awesome Product\",\"sku\":\"10A3\"},\"label\":\"Product\"}],\"edges\":[],\"labels\":{\"Person\":\"#C960A8\",\"Customer\":\"#E0EA60\",\"Product\":\"#144CFD\"},\"types\":[],\"directed\":true}"
-          }
-        ]
       },
       "apps": [],
       "jobName": "paragraph_1601392047189_-1381300776",
@@ -494,6 +469,7 @@
       "dateStarted": "2020-09-29 15:12:57.627",
       "dateFinished": "2020-09-29 15:12:57.670",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -540,7 +516,7 @@
     {
       "text": "%neo4j_cud\nmatch (n)-[m]-(r) return *",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 14:38:30.818",
+      "dateUpdated": "2020-10-05 15:34:58.828",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -589,7 +565,7 @@
           "completionSupport": true
         },
         "editorMode": "ace/mode/undefined",
-        "tableHide": true
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -641,7 +617,8 @@
     "neo4j_basket:shared_process": [],
     "neo4j:shared_process": [],
     "neo4j_cud:shared_process": [],
-    "spark:shared_process": []
+    "spark:shared_process": [],
+    "neo4j_jsonprojection:shared_process": []
   },
   "config": {
     "isZeppelinNotebookCronEnable": false

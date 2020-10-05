@@ -88,7 +88,7 @@
       "title": "Check the db is empty",
       "text": "%neo4j\nmatch (n) return count(n)",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 14:38:40.433",
+      "dateUpdated": "2020-10-05 15:08:40.909",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -130,7 +130,7 @@
         },
         "editorMode": "ace/mode/undefined",
         "title": true,
-        "tableHide": true
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -149,8 +149,8 @@
       "jobName": "paragraph_1601021484585_1264212929",
       "id": "20200925-081124_1496615208",
       "dateCreated": "2020-09-25 08:11:24.585",
-      "dateStarted": "2020-09-29 13:42:16.544",
-      "dateFinished": "2020-09-29 13:42:16.790",
+      "dateStarted": "2020-10-05 15:08:40.936",
+      "dateFinished": "2020-10-05 15:08:40.960",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -199,7 +199,7 @@
       "title": "Show the ingested data",
       "text": "%neo4j\nmatch (n)-[r]-(m) return *",
       "user": "anonymous",
-      "dateUpdated": "2020-09-30 14:38:42.470",
+      "dateUpdated": "2020-10-05 15:10:11.273",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -247,7 +247,7 @@
         },
         "editorMode": "ace/mode/undefined",
         "title": true,
-        "tableHide": true
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -258,7 +258,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"id\":1,\"surname\":\"Santubano\"},\"label\":\"Person\"},{\"id\":1,\"data\":{\"name\":\"David\",\"id\":2,\"surname\":\"Allen\"},\"label\":\"Person\"}],\"edges\":[{\"source\":0,\"target\":1,\"id\":0,\"data\":{\"project\":\"Streams\",\"since\":2018},\"label\":\"KNOWS\"}],\"labels\":{\"Person\":\"#838BAA\"},\"types\":[\"KNOWS\"],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"id\":1,\"surname\":\"Santubano\"},\"label\":\"Person\"},{\"id\":1,\"data\":{\"name\":\"David\",\"id\":2,\"surname\":\"Allen\"},\"label\":\"Person\"}],\"edges\":[{\"source\":0,\"target\":1,\"id\":0,\"data\":{\"project\":\"Streams\",\"since\":2018},\"label\":\"KNOWS\"}],\"labels\":{\"Person\":\"#9C172D\"},\"types\":[\"KNOWS\"],\"directed\":true}"
           }
         ]
       },
@@ -266,8 +266,8 @@
       "jobName": "paragraph_1601021519381_1738226264",
       "id": "20200925-081159_1177695698",
       "dateCreated": "2020-09-25 08:11:59.381",
-      "dateStarted": "2020-09-29 13:43:19.910",
-      "dateFinished": "2020-09-29 13:43:20.158",
+      "dateStarted": "2020-10-05 15:10:11.298",
+      "dateFinished": "2020-10-05 15:10:11.336",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
