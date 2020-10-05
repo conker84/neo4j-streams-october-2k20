@@ -167,7 +167,7 @@
     {
       "text": "%neo4j\nCREATE DATABASE cud",
       "user": "anonymous",
-      "dateUpdated": "2020-09-29 15:04:19.240",
+      "dateUpdated": "2020-10-05 18:19:42.702",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -193,15 +193,15 @@
       "jobName": "paragraph_1601051289174_-2121592749",
       "id": "20200925-162809_354288917",
       "dateCreated": "2020-09-25 16:28:09.174",
-      "dateStarted": "2020-09-29 15:04:19.277",
-      "dateFinished": "2020-09-29 15:04:19.598",
+      "dateStarted": "2020-10-05 18:19:42.734",
+      "dateFinished": "2020-10-05 18:19:42.979",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%neo4j_cud\nmatch (n) return count(n)",
       "user": "anonymous",
-      "dateUpdated": "2020-10-05 15:34:49.528",
+      "dateUpdated": "2020-10-05 18:19:44.256",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -248,14 +248,22 @@
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "count(n)\n0\n"
+          }
+        ]
+      },
       "apps": [],
       "jobName": "paragraph_1601052027924_1128281777",
       "id": "20200925-164027_4023376",
       "dateCreated": "2020-09-25 16:40:27.924",
-      "dateStarted": "2020-09-29 15:05:41.629",
-      "dateFinished": "2020-09-29 15:05:44.729",
+      "dateStarted": "2020-10-05 18:19:44.287",
+      "dateFinished": "2020-10-05 18:19:47.526",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -302,7 +310,7 @@
     {
       "text": "%neo4j_cud\nmatch (n) return n",
       "user": "anonymous",
-      "dateUpdated": "2020-10-05 15:34:52.708",
+      "dateUpdated": "2020-10-05 18:20:27.568",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -355,14 +363,22 @@
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "NETWORK",
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"surname\":\"Santurbano\",\"ssn\":\"A1B34\"},\"label\":\"Person\"}],\"edges\":[],\"labels\":{\"Person\":\"#9B937C\",\"Customer\":\"#C8F4DC\"},\"types\":[],\"directed\":true}"
+          }
+        ]
+      },
       "apps": [],
       "jobName": "paragraph_1601052045418_1045104855",
       "id": "20200925-164045_1833614231",
       "dateCreated": "2020-09-25 16:40:45.418",
-      "dateStarted": "2020-09-29 15:06:24.526",
-      "dateFinished": "2020-09-29 15:06:24.648",
+      "dateStarted": "2020-10-05 18:20:27.598",
+      "dateFinished": "2020-10-05 18:20:27.734",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -409,7 +425,7 @@
     {
       "text": "%neo4j_cud\nmatch (n) return n",
       "user": "anonymous",
-      "dateUpdated": "2020-10-05 15:34:56.218",
+      "dateUpdated": "2020-10-05 18:21:00.652",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -462,14 +478,22 @@
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "NETWORK",
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"surname\":\"Santurbano\",\"ssn\":\"A1B34\"},\"label\":\"Person\"},{\"id\":1,\"data\":{\"name\":\"My Awesome Product\",\"sku\":\"10A3\"},\"label\":\"Product\"}],\"edges\":[],\"labels\":{\"Person\":\"#9B937C\",\"Customer\":\"#C8F4DC\",\"Product\":\"#93AC6B\"},\"types\":[],\"directed\":true}"
+          }
+        ]
+      },
       "apps": [],
       "jobName": "paragraph_1601392047189_-1381300776",
       "id": "20200929-150727_1309278606",
       "dateCreated": "2020-09-29 15:07:27.189",
-      "dateStarted": "2020-09-29 15:12:57.627",
-      "dateFinished": "2020-09-29 15:12:57.670",
+      "dateStarted": "2020-10-05 18:21:00.685",
+      "dateFinished": "2020-10-05 18:21:00.755",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -516,7 +540,7 @@
     {
       "text": "%neo4j_cud\nmatch (n)-[m]-(r) return *",
       "user": "anonymous",
-      "dateUpdated": "2020-10-05 15:34:58.828",
+      "dateUpdated": "2020-10-05 18:21:43.567",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -576,7 +600,7 @@
         "msg": [
           {
             "type": "NETWORK",
-            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"surname\":\"Santurbano\",\"ssn\":\"A1B34\"},\"label\":\"Person\"},{\"id\":1,\"data\":{\"name\":\"My Awesome Product\",\"sku\":\"10A3\"},\"label\":\"Product\"}],\"edges\":[{\"source\":0,\"target\":1,\"id\":0,\"data\":{\"currency\":\"€\",\"quantity\":10},\"label\":\"BOUGHT\"}],\"labels\":{\"Person\":\"#C960A8\",\"Customer\":\"#E0EA60\",\"Product\":\"#144CFD\"},\"types\":[\"BOUGHT\"],\"directed\":true}"
+            "data": "{\"nodes\":[{\"id\":0,\"data\":{\"name\":\"Andrea\",\"surname\":\"Santurbano\",\"ssn\":\"A1B34\"},\"label\":\"Person\"},{\"id\":1,\"data\":{\"name\":\"My Awesome Product\",\"sku\":\"10A3\"},\"label\":\"Product\"}],\"edges\":[{\"source\":0,\"target\":1,\"id\":0,\"data\":{\"currency\":\"€\",\"quantity\":10},\"label\":\"BOUGHT\"}],\"labels\":{\"Person\":\"#9B937C\",\"Customer\":\"#C8F4DC\",\"Product\":\"#93AC6B\"},\"types\":[\"BOUGHT\"],\"directed\":true}"
           }
         ]
       },
@@ -584,8 +608,8 @@
       "jobName": "paragraph_1601392320199_-2071003299",
       "id": "20200929-151200_489677595",
       "dateCreated": "2020-09-29 15:12:00.199",
-      "dateStarted": "2020-09-29 15:17:43.150",
-      "dateFinished": "2020-09-29 15:17:43.246",
+      "dateStarted": "2020-10-05 18:21:43.606",
+      "dateFinished": "2020-10-05 18:21:43.702",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -611,10 +635,7 @@
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
-    "neo4j_cdcschematarget:shared_process": [],
     "md:shared_process": [],
-    "neo4j_cdcschemasource:shared_process": [],
-    "neo4j_basket:shared_process": [],
     "neo4j:shared_process": [],
     "neo4j_cud:shared_process": [],
     "spark:shared_process": [],
